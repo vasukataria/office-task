@@ -53,7 +53,7 @@ export default {
 
   // Initiate superfish on nav menu
  jQuery(document).ready(function(){
-    ('.nav-menu').superfish({
+    $('.nav-menu').superfish({
     animation: {
       opacity: 'show'
     },

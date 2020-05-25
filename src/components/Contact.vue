@@ -91,13 +91,17 @@ export default {
         name: this.User.name,
         email: this.User.email,
         subject: this.User.subject,
-        message: this.User.message,
+        message: this.User.message
       }
 
       console.log(newUser);
+      axios.post('')
+      .then((response) => { console.log(response);
+      })
+      .catch((error) =>{
+        console.log(error);
+      });
     }
-
-
   },
   mounted(){
     jQuery(document).ready(function($) {
