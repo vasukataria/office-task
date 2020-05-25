@@ -7,6 +7,7 @@
 </template>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic|Poppins:300,400,500,700');
 
 
@@ -22,8 +23,8 @@ html, body{
 <script>
 import jQuery from 'jquery'
 import {WOW} from 'wowjs'
-import 'superfish'
-require('superfish')
+//import counterup from 'jquery.counterup'
+//require('superfish')
 
 export default {
   name: 'Home',
@@ -51,13 +52,14 @@ export default {
   new WOW().init();
 
   // Initiate superfish on nav menu
-  $('.nav-menu').superfish({
+ jQuery(document).ready(function(){
+    ('.nav-menu').superfish({
     animation: {
       opacity: 'show'
     },
     speed: 400
   });
-
+  });
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
     var $mobile_nav = $('#nav-menu-container').clone().prop({

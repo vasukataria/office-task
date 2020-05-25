@@ -11,7 +11,8 @@ import "./assets/css/style.css"
 import "jquery"
 import "bootstrap"
 import 'jquery.easing'
-//import 'superfish'
+import 'jquery.counterup'
+import 'superfish'
 
 
 
