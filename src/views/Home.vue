@@ -80,6 +80,7 @@ import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
 import Icon from '@/components/Icon.vue'
 
+
 export default {
   name: 'Home',
  components: {
@@ -94,6 +95,6 @@ export default {
     Contact,
     Footer,
     Icon
-  }
+  },
 }
 </script>
