@@ -48,22 +48,22 @@
               <div id="errormessage"></div>
               <form action="" method="post" role="form" class="contactForm">
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" v-model="User.name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" v-model="User.email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="subject" v-model="User.subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="message" v-model="User.message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit" @click="addToAPI">Send Message</button></div>
               </form>
             </div>
           </div>
@@ -73,10 +73,32 @@
       </div>
     </section>
 </template>
+
 <script>
-import jQuery from "jquery" 
+import jQuery from "jquery"
+import axios from "axios" //eslint-disable-line
 export default {
   name: 'Home',
+  data(){
+    return {
+      User:{name:'',email:'',subject:'',message:''},
+    }
+  },
+  methods:{
+    addToAPI(){
+
+      let newUser = {
+        name: this.User.name,
+        email: this.User.email,
+        subject: this.User.subject,
+        message: this.User.message,
+      }
+
+      console.log(newUser);
+    }
+
+
+  },
   mounted(){
     jQuery(document).ready(function($) {
   "use strict";
