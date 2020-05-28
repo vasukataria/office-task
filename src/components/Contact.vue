@@ -95,7 +95,7 @@ export default {
       }
 
       console.log(newUser);
-      axios.post('‪http://localhost/vue/', newUser)
+      axios.post('‪/vue/index.php', newUser)
       .then((response) => { console.log(response);
       })
       .catch((error) =>{
@@ -198,7 +198,7 @@ export default {
     else var str = $(this).serialize();
     var action = $(this).attr('action');
     if( ! action ) {
-      action = 'c/xampp/htdocs/vue/index.php';
+      action = '‪/vue/index.php';
     }
     $.ajax({
       type: "POST",
