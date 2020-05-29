@@ -95,7 +95,7 @@ export default {
       }
 
       console.log(newUser);
-      axios.post('‪/vue/index.php', newUser)
+      axios.post('‪', newUser)
       .then((response) => { console.log(response);
       })
       .catch((error) =>{
