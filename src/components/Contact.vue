@@ -46,24 +46,31 @@
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form method="post" role="form" class="contactForm" @submit="checkForm">
+                <p v-if="errors.length">
+                  <b>Please correct the following error(s):</b>
+                  <ul>
+                    <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+                  </ul>
+                </p>
+
                 <div class="form-group">
-                  <input type="text" name="name" v-model="User.name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" v-model="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" v-model="User.email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" v-model="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" v-model="User.subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="subject" v-model="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" v-model="User.message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="message" v-model="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit" @click="addToAPI">Send Message</button></div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
             </div>
           </div>
@@ -77,33 +84,57 @@
 <script>
 //import jQuery from "jquery"
 import axios from "axios" //eslint-disable-line
+
 export default {
   name: 'Home',
   data(){
     return {
-      User:{name:'',email:'',subject:'',message:''},
+      errors: [],
+      name: null,
+      email: null,
+      subject: null,
+      message: null,
     }
   },
   methods:{
-    addToAPI(){
-
-      let newUser = {
-        name: this.User.name,
-        email: this.User.email,
-        subject: this.User.subject,
-        message: this.User.message
+    checkForm: function (e) {
+      e.preventDefault();
+      
+      if (this.name && this.email && this.subject && this.message) {
+        axios(
+          { 
+            method: "POST", 
+            "url": "http://localhost/vue/", 
+            "data": {
+                      name : this.name,
+                      email : this.email,
+                      subject : this.subject,
+                      message : this.message,
+                    }, 
+            "headers": { "content-type": "application/x-www-form-urlencoded" } 
+          }).then(result => {
+              console.log(result.data);
+              this.response = result.data;
+          }, error => {
+              console.error(error);
+          });
       }
 
-      console.log(newUser);
-      axios.post('‪http://helpfulinsightdemo.com/testjson/about.php', newUser)
-      .then((response) => { console.log(response);
-      })
-      .catch((error) =>{
-        console.log(error);
-      });
+      this.errors = [];
+
+      if (!this.name) {
+        this.errors.push('Name required.');
+      }
+      if (!this.email) {
+        this.errors.push('Email required.');
+      }
+      if (!this.subject) {
+        this.errors.push('Subject required.');
+      }
+      if (!this.message) {
+        this.errors.push('Message required.');
+      }
     }
   },
-  
-
   }
 </script>
