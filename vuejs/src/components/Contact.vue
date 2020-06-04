@@ -46,7 +46,7 @@
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
-              <form method="post" role="form" class="contactForm" @submit="checkForm">
+              <form method="post" role="form" class="contactForm" @submit="checkForm" action="" enctype='multipart/form-data'>
                 <p v-if="errors.length">
                   <b>Please correct the following error(s):</b>
                   <ul>

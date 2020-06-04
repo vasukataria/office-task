@@ -3,11 +3,14 @@
 
 
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
 
 $name="";
- $email = "";
- $message = "";
- $subject = "";
+$email = "";
+$message = "";
+$subject = "";
 
 
  $servername = "localhost";
@@ -27,27 +30,31 @@ $name="";
  
  //echo 'Connected successfully' ;
 //echo json_encode($_POST);
-if(isset($_POST['submit'])){
+$postdata = file_get_contents("php://input");
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+if(isset($postdata) && !empty($postdata))
+{
+
+$request = json_decode($postdata);
 
 
-$name = mysqli_real_escape_string($conn, $_POST['name']);
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$subject = mysqli_real_escape_string($conn, $_POST['subject']);
-$message = mysqli_real_escape_string($conn, $_POST['message']);
-}
+$name = mysqli_real_escape_string($conn, trim($request->name));
+$email = mysqli_real_escape_string($conn, trim($request->email));
+$subject = mysqli_real_escape_string($conn, trim($request->subject));
+$message = mysqli_real_escape_string($conn, trim($request->message));
+
 
 $query = "
-  INSERT INTO vuetable (`id`, `name`, `email`, `subject`,
-        `message`) VALUES ('$name',
-        '$email', '$subject', '$message');";
+  INSERT INTO `videos`(`name`, `email`, `subject`,`message`) 
+  VALUES('{$name}','{$email}', '{$subject}', '{$message}')";
 
 
- mysqli_query($conn, $query);
+  if(mysqli_query($conn , $query)){
+    echo "Records added successfully.";
+  } else{
+ echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+}
+}
 
  mysqli_close($conn);
  ?>
