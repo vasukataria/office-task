@@ -7,7 +7,7 @@
 </template>
 
 <style>
-
+@import './assets/css/index.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic|Poppins:300,400,500,700');
 
 
