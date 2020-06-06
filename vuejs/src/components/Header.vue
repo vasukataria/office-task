@@ -33,7 +33,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#login">login</a></li>
+          <li><router-link to="/login">login</router-link></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

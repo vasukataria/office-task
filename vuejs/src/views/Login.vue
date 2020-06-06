@@ -20,7 +20,8 @@
 			<i id="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
-		<button>Submit</button>
+		<button>Login</button>
+        <p>create new account <router-link to="/Signup">Signup</router-link></p>
 	</form>
 </div>
 </div>
