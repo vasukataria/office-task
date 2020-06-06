@@ -1,39 +1,41 @@
 <template>
-<div id="container">
-	<div class="header">
-		<h2>Create Account</h2>
+<div id="body">
+  <div id="container">
+	<div id="header">
+		<h2 id="h2">Create Account</h2>
 	</div>
-	<form id="form" class="form">
-		<div class="form-control">
+	<form id="form">
+		<div id="form-control">
 			<label for="username">Username</label>
 			<input type="text" placeholder="Enter your username" id="username" />
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
+			<i id="fas fa-check-circle"></i>
+			<i id="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
-		<div class="form-control">
+		<div id="form-control">
 			<label for="username">Email</label>
 			<input type="email" placeholder="info@example.com" id="email" />
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
+			<i id="fas fa-check-circle"></i>
+			<i id="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
-		<div class="form-control">
+		<div id="form-control">
 			<label for="username">Password</label>
 			<input type="password" placeholder="Password" id="password"/>
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
+			<i id="fas fa-check-circle"></i>
+			<i id="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
-		<div class="form-control">
+		<div id="form-control">
 			<label for="username">Password check</label>
 			<input type="password" placeholder="Password two" id="password2"/>
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
+			<i id="fas fa-check-circle"></i>
+			<i id="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
 		<button>Submit</button>
 	</form>
+</div>
 </div>
 
 </template>
