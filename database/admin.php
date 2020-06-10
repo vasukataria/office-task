@@ -1,12 +1,10 @@
 <?php
-
-
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 
-$name="";
+$name="";																	
 $email = "";
 $message = "";
 $subject = "";
@@ -30,6 +28,28 @@ $subject = "";
  //echo 'Connected successfully' ;
 //echo json_encode($_POST);
 $postdata = file_get_contents("php://input");
+
+
+
+
+if(isset($getdata) && !empty($getdata)){
+   $request = json_decode($postdata); 
+    $query = "SELECT * FROM `videos` WHERE `id` ";      
+        // Attempt to execute the prepared statement
+    
+            if(mysqli_num_rows($result) == 1){
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                
+                $name = $row["name"];
+                $email = $row["email"];
+                $message = $row["message"];
+                $subject = $row["subject"];
+            } 
+        else{
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+    }
+
 
 if(isset($postdata) && !empty($postdata))
 {
@@ -67,7 +87,7 @@ $message = mysqli_real_escape_string($conn, trim($request->message));
 
 
 $query = "
-UPDATE `videos` SET `name`=`{$name}`,`email`=`{$emai}`, `subject`=`{$subject}`, `message`=`{$message}`= where `id`=`$id`";
+UPDATE `videos` SET `name`=`{$name}`,`email`=`{$emai}`, `subject`=`{$subject}`, `message`=`{$message}`= where `id`=`{$id}`";
 
 
   if(mysqli_query($conn , $query)){
@@ -89,7 +109,7 @@ $message = mysqli_real_escape_string($conn, trim($request->message));
 
 
 $query = "
-DELETE from members where `id`=`$id`";
+DELETE from `videos` where `id`=`{$id}`";
 
 
   if(mysqli_query($conn , $query)){
