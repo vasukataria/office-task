@@ -4,10 +4,11 @@ header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 
-$name="";																	
+$name="";                                 
 $email = "";
 $message = "";
 $subject = "";
+$policies = [];
 
 
  $servername = "localhost";
@@ -27,31 +28,51 @@ $subject = "";
  
  //echo 'Connected successfully' ;
 //echo json_encode($_POST);
+$out = array('error' => false);
+
+$crud = 'read';
+
+if(isset($_GET['crud'])){
+  $crud = $_GET['crud'];
+}
+//$postdata = file_get_contents("php://input");
+
+
+
+  if($crud == 'read'){
+  $sql = "SELECT * FROM `videos`";
+  $query = $conn->query($sql);
+  //print_r($query);
+  $videos = array();
+
+  if($result = mysqli_query($conn,$sql))
+  {
+    $i = 0;
+  while($row = mysqli_fetch_assoc($result))
+  {
+    $policies[$i]['id']      = $row['id'];
+    $policies[$i]['name']    = $row['name'];
+    $policies[$i]['email']   = $row['email'];
+    $policies[$i]['subject'] = $row['subject'];
+    $policies[$i]['message'] = $row['message'];
+    $i++;
+  }
+  
+  echo json_encode($policies);
+  
+}
+  $out['videos'] = $videos;
+
+}
+
+
+if($crud == 'create'){
+
+
 $postdata = file_get_contents("php://input");
 
-
-
-
-if(isset($getdata) && !empty($getdata)){
-   $request = json_decode($postdata); 
-    $query = "SELECT * FROM `videos` WHERE `id` ";      
-        // Attempt to execute the prepared statement
-    
-            if(mysqli_num_rows($result) == 1){
-                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                
-                $name = $row["name"];
-                $email = $row["email"];
-                $message = $row["message"];
-                $subject = $row["subject"];
-            } 
-        else{
-            echo "Oops! Something went wrong. Please try again later.";
-        }
-    }
-
-
 if(isset($postdata) && !empty($postdata))
+
 {
 
 $request = json_decode($postdata);
@@ -63,61 +84,54 @@ $subject = mysqli_real_escape_string($conn, trim($request->subject));
 $message = mysqli_real_escape_string($conn, trim($request->message));
 
 
+
+
 $query = "
-  INSERT INTO `videos`(`name`, `email`, `subject`,`message`) 
-  VALUES('{$name}','{$email}', '{$subject}', '{$message}')";
+            INSERT INTO `videos` (`name`, `email`, `subject`,`message`) 
+            VALUES('{$name}','{$email}', '{$subject}', '{$message}')";
+
 
 
   if(mysqli_query($conn , $query)){
     echo "Records added successfully.";
   } else{
- echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+         echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+    }
 }
 }
-if(isset($postdata) && !empty($postdata))
-{
 
-$request = json_decode($postdata);
+if($crud == 'update'){
 
-$id = mysqli_real_escape_string($conn, trim($request->id));
-$name = mysqli_real_escape_string($conn, trim($request->name));
-$email = mysqli_real_escape_string($conn, trim($request->email));
-$subject = mysqli_real_escape_string($conn, trim($request->subject));
-$message = mysqli_real_escape_string($conn, trim($request->message));
+  $sql = "UPDATE `videos` SET `name`=`{$name}`,`email`=`{$emai}`, `subject`=`{$subject}`, `message`=`{$message}`= where `id`='{$id}'";
+  $query = $conn->query($sql);
 
-
-$query = "
-UPDATE `videos` SET `name`=`{$name}`,`email`=`{$emai}`, `subject`=`{$subject}`, `message`=`{$message}`= where `id`=`{$id}`";
-
-
-  if(mysqli_query($conn , $query)){
-    echo "upadte successfully.";
-  } else{
- echo "ERROR: update not able to execute $query. " . mysqli_error($conn);
+  if($query){
+    $out['message'] = "Member Updated Successfully";
+  }
+  else{
+    $out['error'] = true;
+    $out['message'] = "Could not update Member";
+  }
+  
 }
+
+if($crud == 'delete'){
+
+  $sql = " DELETE from `videos` where `id`='{$id}'";
+  $query = $conn->query($sql);
+
+  if($query){
+    $out['message'] = "Member Deleted Successfully";
+  }
+  else{
+    $out['error'] = true;
+    $out['message'] = "Could not delete Member";
+  }
+  
 }
-if(isset($postdata) && !empty($postdata))
-{
-
-$request = json_decode($postdata);
-
-$id = mysqli_real_escape_string($conn, trim($request->id));
-$name = mysqli_real_escape_string($conn, trim($request->name));
-$email = mysqli_real_escape_string($conn, trim($request->email));
-$subject = mysqli_real_escape_string($conn, trim($request->subject));
-$message = mysqli_real_escape_string($conn, trim($request->message));
 
 
-$query = "
-DELETE from `videos` where `id`=`{$id}`";
 
-
-  if(mysqli_query($conn , $query)){
-    echo "Delete successfully.";
-  } else{
- echo "ERROR: Delete not able to execute $query. " . mysqli_error($conn);
-}
-}
 
 
  mysqli_close($conn);

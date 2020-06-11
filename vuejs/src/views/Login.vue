@@ -37,8 +37,6 @@ export default {
   },
   methods: {
     login () {
-      console.log(this.username)
-      console.log(this.password)
       this.$http.post('', { username: this.username, password: this.password })
     .then(request => {
       console.log(request);
@@ -48,17 +46,17 @@ export default {
         this.loginFailed()  
       }            
     })
-    .catch((json) => {  
+    .catch(() => {  
       this.loginFailed()
     })
     },
-    loginSuccessful (req) {
-    //  if (!req.data.token) {
-    // this.loginFailed()
-    // return
-    //  }
+    loginSuccessful() {
+      //if (!req.data.token) {
+     //this.loginFailed()
+     //return
+      //}
 
-     // localStorage.token = req.data.token
+      
      this.error = false
      this.$router.replace('/')
      },

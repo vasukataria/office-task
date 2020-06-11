@@ -30,11 +30,11 @@
 					<th>Action</th>
 				</thead>
 				<tbody>
-					<tr v-for="member in members"  v-bind:key="member">
-						<td>{{ member.name }}</td>
-						<td>{{ member.email }}</td>
-						<td>{{ member.message }}</td>
-						<td>{{ member.subject }}</td>
+					<tr v-for="video in videos"  v-bind:key="video.id">
+						<td>{{ video.name }}</td>
+						<td>{{ video.email }}</td>
+						<td>{{ video.message }}</td>
+						<td>{{ video.subject }}</td>
 						<td>
 							<button class="btn btn-success" @click="showEditModal = true; selectMember(member);"><span class="glyphicon glyphicon-edit"></span> Edit</button> <button class="btn btn-danger" @click="showDeleteModal = true; selectMember(member);"><span class="glyphicon glyphicon-trash"></span> Delete</button>
 
@@ -53,25 +53,25 @@
 		<div class="modalBody">
 			<div class="form-group">
 				<label>name:</label>
-				<input type="text" class="form-control" v-model="newMember.name">
+				<input type="text" class="form-control" v-model="newMember.name" name="name">
 			</div>
 			<div class="form-group">
 				<label>email:</label>
-				<input type="email" class="form-control" v-model="newMember.email">
+				<input type="email" class="form-control" v-model="newMember.email" name = "email">
 			</div>
 			<div class="form-group">
 				<label>subject:</label>
-				<input type="text" class="form-control" v-model="newMember.subject">
+				<input type="text" class="form-control" v-model="newMember.subject" name = "subject">
 			</div>
 			<div class="form-group">
 				<label>message:</label>
-				<input type="text" class="form-control" v-model="newMember.name">
+				<input type="text" class="form-control" v-model="newMember.message" name ="message">
 			</div>
 		</div>
 		<hr>
 		<div class="modalFooter">
 			<div class="footerBtn pull-right">
-				<button class="btn btn-default" @click="showAddModal = false"><span class="glyphicon glyphicon-remove"></span> Cancel</button> <button class="btn btn-primary" @click="showAddModal = false; saveMember();"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+				<button class="btn btn-default" @click="showAddModal = false"><span class="glyphicon glyphicon-remove"></span> Cancel</button> <button class="btn btn-primary" @click="showAddModal = false; saveMember();"><span class="glyphicon glyphicon-floppy-disk" type="submit" name="submit"></span> Save</button>
 			</div>
 		</div>
 	</div>
@@ -86,13 +86,21 @@
 		</div>
 		<div class="modalBody">
 			<div class="form-group">
-				<label>Firstname:</label>
-				<input type="text" class="form-control" v-model="clickMember.firstname">
+				<label>name:</label>
+				<input type="text" class="form-control" v-model="clickMember.name">
 			</div>
 			<div class="form-group">
-				<label>Lastname:</label>
-				<input type="text" class="form-control" v-model="clickMember.lastname">
+				<label>email:</label>
+				<input type="text" class="form-control" v-model="clickMember.email">
 			</div>
+            <div class="form-group">
+                <label>subject:</label>
+                <input type="text" class="form-control" v-model="clickMember.subject">
+            </div>
+            <div class="form-group">
+                <label>message:</label>
+                <input type="text" class="form-control" v-model="clickMember.message">
+            </div>
 		</div>
 		<hr>
 		<div class="modalFooter">
@@ -112,7 +120,7 @@
 		</div>
 		<div class="modalBody">
 			<h5 class="text-center">Are you sure you want to Delete</h5>
-			<h2 class="text-center">{{clickMember.name}} {{clickMember.email}}{{clickMember.subject}} {{clickMember.message}}</h2>
+			<h2 class="text-center">{{clickMember.name}} {{clickMember.email}} {{clickMember.subject}} {{clickMember.message}}</h2>
 		</div>
 		<hr>
 		<div class="modalFooter">
@@ -133,12 +141,12 @@ export default{
 	data(){
 		return{
 		showAddModal: false,
-		showEditModal: false,
+		showEditModal: true,
 		showDeleteModal: false,
 		errorMessage: "",
 		successMessage: "",
-		members: [],
-		newMember: {name: '', email: '', message:'', subject:''},
+		videos: [],
+		newMember: {name: '', email: '', subject:'', message:''},
 		clickMember: {}
 	}
 },
@@ -157,31 +165,32 @@ export default{
 						self.errorMessage = response.data.message;
 					}
 					else{
-						self.members = response.data.members;
+						self.videos = response.data;
 					}
 				});
 		},
 
 		saveMember: function(){
 			//console.log(app.newMember);
-			var memForm = this.toFormData(this.newMember);
-			axios.post('http://localhost/officetask/database/admin.php', memForm)
+			var self = this;
+            //debugger;		
+			axios.post('http://localhost/officetask/database/admin.php?crud=create', this.newMember)
 				.then(function(response){
-					//console.log(response);
-					this.newMember = {name: '', email: '', message:'', subject:''};
+					console.log(response);
+					self.newMember = {name: '', email: '', message:'', subject:''};
 					if(response.data.error){
-						this.errorMessage = response.data.message;
+						self.errorMessage = response.data.message;
 					}
 					else{
-						this.successMessage = response.data.message
-						this.getAllMembers();
+						self.successMessage = response.data;
+						self.getAllMembers();
 					}
 				});
 		},
 
 		updateMember(){
 			var memForm = this.toFormData(this.clickMember);
-			axios.post('http://localhost/officetask/database/admin.php', memForm)
+			axios.post('http://localhost/officetask/database/admin.php?crud=update', memForm)
 				.then(function(response){
 					//console.log(response);
 					this.clickMember = {};
@@ -189,7 +198,7 @@ export default{
 						this.errorMessage = response.data.message;
 					}
 					else{
-						this.successMessage = response.data.message
+						this.successMessage = response.data;
 						this.getAllMembers();
 					}
 				});
@@ -197,7 +206,7 @@ export default{
 
 		deleteMember(){
 			var memForm = this.toFormData(this.clickMember);
-			axios.post('http://localhost/officetask/database/admin.php', memForm)
+			axios.post('http://localhost/officetask/database/admin.php?crud=delete', memForm)
 				.then(function(response){
 					//console.log(response);
 					this.clickMember = {};
@@ -205,19 +214,19 @@ export default{
 						this.errorMessage = response.data.message;
 					}
 					else{
-						this.successMessage = response.data.message
+						this.successMessage = response.data;
 						this.getAllMembers();
 					}
 				});
 		},
 
-		selectMember(member){
-			this.clickMember = member;
+		selectMember(video){
+			this.clickMember = video;
 		},
 
 		toFormData: function(obj){
 			var form_data = new FormData();
-			for(var key in obj){
+            for(var key in obj){
 				form_data.append(key, obj[key]);
 			}
 			return form_data;
