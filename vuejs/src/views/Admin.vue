@@ -36,7 +36,7 @@
 						<td>{{ video.message }}</td>
 						<td>{{ video.subject }}</td>
 						<td>
-							<button class="btn btn-success" @click="showEditModal = true; selectMember(member);"><span class="glyphicon glyphicon-edit"></span> Edit</button> <button class="btn btn-danger" @click="showDeleteModal = true; selectMember(member);"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+							<button class="btn btn-success" @click="showEditModal = true; selectMember(video);"><span class="glyphicon glyphicon-edit"></span> Edit</button> <button class="btn btn-danger" @click="showDeleteModal = true; selectMember(video);"><span class="glyphicon glyphicon-trash"></span> Delete</button>
 
 						</td>
 					</tr>
@@ -87,19 +87,19 @@
 		<div class="modalBody">
 			<div class="form-group">
 				<label>name:</label>
-				<input type="text" class="form-control" v-model="clickMember.name">
+				<input type="text" class="form-control" v-model="clickVideo.name">
 			</div>
 			<div class="form-group">
 				<label>email:</label>
-				<input type="text" class="form-control" v-model="clickMember.email">
+				<input type="text" class="form-control" v-model="clickVideo.email">
 			</div>
             <div class="form-group">
                 <label>subject:</label>
-                <input type="text" class="form-control" v-model="clickMember.subject">
+                <input type="text" class="form-control" v-model="clickVideo.subject">
             </div>
             <div class="form-group">
                 <label>message:</label>
-                <input type="text" class="form-control" v-model="clickMember.message">
+                <input type="text" class="form-control" v-model="clickVideo.message">
             </div>
 		</div>
 		<hr>
@@ -120,7 +120,7 @@
 		</div>
 		<div class="modalBody">
 			<h5 class="text-center">Are you sure you want to Delete</h5>
-			<h2 class="text-center">{{clickMember.name}} {{clickMember.email}} {{clickMember.subject}} {{clickMember.message}}</h2>
+			<h2 class="text-center">{{clickVideo.name}} {{clickVideo.email}} {{clickVideo.subject}} {{clickVideo.message}}</h2>
 		</div>
 		<hr>
 		<div class="modalFooter">
@@ -141,13 +141,13 @@ export default{
 	data(){
 		return{
 		showAddModal: false,
-		showEditModal: true,
+		showEditModal: false,
 		showDeleteModal: false,
 		errorMessage: "",
 		successMessage: "",
 		videos: [],
 		newMember: {name: '', email: '', subject:'', message:''},
-		clickMember: {}
+		clickVideo: {}
 	}
 },
 
@@ -189,39 +189,41 @@ export default{
 		},
 
 		updateMember(){
-			var memForm = this.toFormData(this.clickMember);
+			var self = this;
+			var memForm = self.toFormData(self.clickVideo);
 			axios.post('http://localhost/officetask/database/admin.php?crud=update', memForm)
 				.then(function(response){
-					//console.log(response);
-					this.clickMember = {};
+					console.log(response);
+					self.clickVideo = {};
 					if(response.data.error){
-						this.errorMessage = response.data.message;
+						self.errorMessage = response.data.message;
 					}
 					else{
-						this.successMessage = response.data;
-						this.getAllMembers();
+						self.successMessage = response.data;
+						self.getAllMembers();
 					}
 				});
 		},
 
 		deleteMember(){
-			var memForm = this.toFormData(this.clickMember);
+			var self = this;
+			var memForm = self.toFormData(self.clickVideo);
 			axios.post('http://localhost/officetask/database/admin.php?crud=delete', memForm)
 				.then(function(response){
 					//console.log(response);
-					this.clickMember = {};
+					self.clickVideo = {};
 					if(response.data.error){
-						this.errorMessage = response.data.message;
+						self.errorMessage = response.data.message;
 					}
 					else{
-						this.successMessage = response.data;
-						this.getAllMembers();
+						self.successMessage = response.data;
+						self.getAllMembers();
 					}
 				});
 		},
 
 		selectMember(video){
-			this.clickMember = video;
+			this.clickVideo = video;
 		},
 
 		toFormData: function(obj){
