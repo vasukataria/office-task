@@ -1,0 +1,5 @@
+2020/06/15-10:18:00.509 fde Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_325919zl56.codesandbox.io_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/15-10:18:59.436 1007 Level-0 table #5: started
+2020/06/15-10:18:59.534 1007 Level-0 table #5: 280972 bytes OK
+2020/06/15-10:18:59.609 1007 Delete type=0 #3
+2020/06/15-10:18:59.609 1007 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

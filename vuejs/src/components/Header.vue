@@ -9,7 +9,7 @@
       </div>
 
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
+        <ul class="nav-menu" v-for="(obj,key) in ServiceJSON" :key="key">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>

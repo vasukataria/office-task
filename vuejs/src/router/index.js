@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Admin from '../views/Admin.vue'
+import Adminheader from '../views/Adminheader.vue'
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -26,6 +28,11 @@ Vue.use(VueRouter)
     path: '/Admin',
     name: 'Admin',
     component: Admin
+  },
+     {
+    path: '/Adminheader',
+    name: 'Adminheaders',
+    component: Adminheader
   },
 ]
 

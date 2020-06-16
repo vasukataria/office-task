@@ -101,26 +101,35 @@ $query = "
 }
 
 if($crud == 'update'){
+$id = mysqli_real_escape_string($conn, $_POST['id']);
+$name = mysqli_real_escape_string($conn, $_POST['name']);
+$email  = mysqli_real_escape_string($conn, $_POST['email']);
+$subject  = mysqli_real_escape_string($conn, $_POST['subject']);
+$message  = mysqli_real_escape_string($conn, $_POST['message']);
 
-  $sql = "UPDATE `videos` SET `name`=`{$name}`,`email`=`{$emai}`, `subject`=`{$subject}`, `message`=`{$message}`= where `id`='{$id}'";
-  $query = $conn->query($sql);
+$query = "UPDATE `videos` SET `name`='$name',`email`='$email', `subject`='$subject', `message`='$message' WHERE `id` = '$id' ";
 
-  if($query){
-    $out['message'] = "Member Updated Successfully";
-  }
-  else{
-    $out['error'] = true;
-    $out['message'] = "Could not update Member";
-  }
+if(mysqli_query($conn , $query)){
+    echo "Records edited successfully.";
+ }else{
+         echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+      }
+
+  
   
 }
 
 if($crud == 'delete'){
 
-  $sql = " DELETE from `videos` where `id`='{$id}'";
-  $query = $conn->query($sql);
+  $id = mysqli_real_escape_string($conn, $_POST['id']);
 
-  if($query){
+  $sql = $conn->prepare("DELETE FROM `videos` WHERE id=?");
+  $sql->bind_param("s", $id);
+  $sql->execute();
+
+  
+
+  if(mysqli_query($conn , $sql)){
     $out['message'] = "Member Deleted Successfully";
   }
   else{

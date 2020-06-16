@@ -1,0 +1,15 @@
+2020/06/15-11:26:06.462 26e4 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_42rm330ol4.codesandbox.io_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/15-11:26:06.462 26e4 Recovering log #44
+2020/06/15-11:26:06.462 26e4 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_42rm330ol4.codesandbox.io_0.indexeddb.leveldb/000044.log 
+2020/06/15-11:38:54.520 2a3b Level-0 table #49: started
+2020/06/15-11:38:54.712 2a3b Level-0 table #49: 276664 bytes OK
+2020/06/15-11:38:54.760 2a3b Delete type=0 #44
+2020/06/15-11:38:54.794 2a3b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/15-11:38:54.794 2a3b Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x1f\x03\x00P\xba\xcdh+wB\x00\x01E\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00c\x00o\x00d\x00e\x00s\x00a\x00n\x00d\x00b\x00o\x00x\x00.\x00i\x00o\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00/\x00j\x00s\x00/\x00v\x00e\x00n\x00d\x00o\x00r\x00s\x00~\x00j\x00e\x00s\x00t\x00-\x00l\x00i\x00t\x00e\x00.\x001\x009\x000\x00e\x006\x00b\x005\x003\x008\x00.\x00c\x00h\x00u\x00n\x00k\x00.\x00j\x00s' @ 2381 : 1
+2020/06/15-11:38:54.794 2a3b Compacting 1@1 + 1@2 files
+2020/06/15-11:38:54.944 2a3b Generated table #50@1: 256 keys, 279342 bytes
+2020/06/15-11:38:54.945 2a3b Compacted 1@1 + 1@2 files => 279342 bytes
+2020/06/15-11:38:55.056 2a3b compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/06/15-11:38:55.056 2a3b Delete type=2 #49
+2020/06/15-11:38:55.056 2a3b Delete type=2 #46
+2020/06/15-11:38:55.057 2a3b Manual compaction at level-1 from '\x00\x03\x01\x1f\x03\x00P\xba\xcdh+wB\x00\x01E\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00c\x00o\x00d\x00e\x00s\x00a\x00n\x00d\x00b\x00o\x00x\x00.\x00i\x00o\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00/\x00j\x00s\x00/\x00v\x00e\x00n\x00d\x00o\x00r\x00s\x00~\x00j\x00e\x00s\x00t\x00-\x00l\x00i\x00t\x00e\x00.\x001\x009\x000\x00e\x006\x00b\x005\x003\x008\x00.\x00c\x00h\x00u\x00n\x00k\x00.\x00j\x00s' @ 2381 : 1 .. (end); will stop at (end)

@@ -29,6 +29,7 @@
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
     "vue-countup-v2": "^4.0.0",
+    "vue-material": "^1.0.0-beta-14",
     "vue-router": "^3.1.6",
     "waypoints": "^4.0.1",
     "wow.js": "^1.2.2",
@@ -43,6 +44,9 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "google-fonts-webpack-plugin": "^0.4.4",
-    "vue-template-compiler": "^2.6.11"
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0"
   }
 }
