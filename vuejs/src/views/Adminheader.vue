@@ -30,7 +30,7 @@
 
           <md-list-item>
     
-            <span class="md-list-item-text">Header</span>
+            <span class="md-list-item-text"><router-link to="/Header">Header</router-link></span>
           </md-list-item>
 
         </md-list>
@@ -44,11 +44,11 @@
 
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
-import '../components/Content.vue'
+//import '../components/Content.vue'
   export default {
     name: 'Adminheader',
     components: {
-    Content,
+   // Content,
     },
     data: () => ({
       menuVisible: false

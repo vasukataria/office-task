@@ -5,7 +5,8 @@ import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Admin from '../views/Admin.vue'
 import Adminheader from '../views/Adminheader.vue'
-
+import Practice from '../views/Practice.vue'
+import Header from '../views/Header.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -33,6 +34,16 @@ Vue.use(VueRouter)
     path: '/Adminheader',
     name: 'Adminheaders',
     component: Adminheader
+  },
+    {
+    path: '/Practice',
+    name: 'Practice',
+    component: Practice
+  },
+  {
+    path: '/Header',
+    name: 'Header',
+    component: Header
   },
 ]
 

@@ -1,3 +1,36 @@
-2020/06/16-23:50:15.544 a40 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
-2020/06/16-23:50:15.820 a40 Recovering log #50
-2020/06/16-23:50:16.299 a40 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000050.log 
+2020/06/19-09:51:18.683 1bd0 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
+2020/06/19-09:51:18.684 1bd0 Recovering log #71
+2020/06/19-09:51:19.118 1bd0 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000071.log 
+2020/06/19-09:51:43.963 1d19 Level-0 table #75: started
+2020/06/19-09:51:44.119 1d19 Level-0 table #75: 16819 bytes OK
+2020/06/19-09:51:44.166 1d19 Delete type=0 #71
+2020/06/19-09:51:44.166 1d19 Compacting 4@0 + 1@1 files
+2020/06/19-09:51:44.420 1d19 Generated table #76@0: 381 keys, 1237497 bytes
+2020/06/19-09:51:44.420 1d19 Compacted 4@0 + 1@1 files => 1237497 bytes
+2020/06/19-09:51:44.498 1d19 compacted to: files[ 0 1 0 0 0 0 0 ]
+2020/06/19-09:51:44.499 1d19 Delete type=2 #72
+2020/06/19-09:51:44.499 1d19 Delete type=2 #68
+2020/06/19-09:51:44.499 1d19 Delete type=2 #75
+2020/06/19-09:51:44.499 1d19 Delete type=2 #70
+2020/06/19-09:51:44.499 1d19 Delete type=2 #66
+2020/06/19-10:27:22.374 1d19 Level-0 table #78: started
+2020/06/19-10:27:22.441 1d19 Level-0 table #78: 22705 bytes OK
+2020/06/19-10:27:22.480 1d19 Delete type=0 #74
+2020/06/19-10:28:31.536 1d19 Level-0 table #80: started
+2020/06/19-10:28:31.567 1d19 Level-0 table #80: 61246 bytes OK
+2020/06/19-10:28:31.601 1d19 Delete type=0 #77
+2020/06/19-11:11:44.824 1d19 Level-0 table #82: started
+2020/06/19-11:11:44.859 1d19 Level-0 table #82: 14697 bytes OK
+2020/06/19-11:11:44.889 1d19 Delete type=0 #79
+2020/06/19-16:23:19.876 1d19 Level-0 table #84: started
+2020/06/19-16:23:24.831 1d19 Level-0 table #84: 15813 bytes OK
+2020/06/19-16:23:25.427 1d19 Delete type=0 #81
+2020/06/19-16:23:26.816 1d19 Compacting 4@0 + 1@1 files
+2020/06/19-16:23:30.666 1d19 Generated table #85@0: 450 keys, 1219293 bytes
+2020/06/19-16:23:30.666 1d19 Compacted 4@0 + 1@1 files => 1219293 bytes
+2020/06/19-16:23:30.820 1d19 compacted to: files[ 0 1 0 0 0 0 0 ]
+2020/06/19-16:23:30.846 1d19 Delete type=2 #78
+2020/06/19-16:23:30.846 1d19 Delete type=2 #84
+2020/06/19-16:23:30.846 1d19 Delete type=2 #76
+2020/06/19-16:23:30.846 1d19 Delete type=2 #82
+2020/06/19-16:23:30.846 1d19 Delete type=2 #80

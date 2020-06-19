@@ -1,0 +1,8 @@
+2020/06/18-12:48:29.834 5ae1 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.speedtest.net_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/18-12:48:29.835 5ae1 Recovering log #7
+2020/06/18-12:48:29.836 5ae1 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.speedtest.net_0.indexeddb.leveldb/000007.log 
+2020/06/18-12:48:50.847 33ce Level-0 table #11: started
+2020/06/18-12:48:50.847 33ce Level-0 table #11: 0 bytes OK
+2020/06/18-12:48:50.880 33ce Delete type=0 #7
+2020/06/18-12:48:50.880 33ce Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/18-12:48:50.880 33ce Manual compaction at level-1 from (begin) .. (end); will stop at (end)
