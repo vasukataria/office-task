@@ -1,24 +1,15 @@
-2020/06/19-10:28:15.675 2d2a Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/06/19-10:28:15.676 2d2a Recovering log #4
-2020/06/19-10:28:15.781 2d2a Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/000004.log 
-2020/06/19-11:11:33.953 38e9 Level-0 table #8: started
-2020/06/19-11:11:34.033 38e9 Level-0 table #8: 1403736 bytes OK
-2020/06/19-11:11:34.081 38e9 Delete type=0 #4
-2020/06/19-11:12:01.281 38e9 Compacting 1@1 + 1@2 files
-2020/06/19-11:12:01.452 38e9 Generated table #9@1: 1766 keys, 578526 bytes
-2020/06/19-11:12:01.452 38e9 Compacted 1@1 + 1@2 files => 578526 bytes
-2020/06/19-11:12:01.540 38e9 compacted to: files[ 0 0 1 0 0 0 0 ]
-2020/06/19-11:12:01.541 38e9 Delete type=2 #8
-2020/06/19-11:12:01.541 38e9 Delete type=2 #5
-2020/06/19-11:15:17.290 38e9 Level-0 table #11: started
-2020/06/19-11:15:17.342 38e9 Level-0 table #11: 559079 bytes OK
-2020/06/19-11:15:17.380 38e9 Delete type=0 #7
-2020/06/19-11:15:17.381 38e9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2020/06/19-11:15:17.381 38e9 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x12\x02\x01a\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00-\x00a\x00s\x00m\x00.\x00s\x00e\x00c\x00u\x00r\x00e\x00.\x00s\x00k\x00y\x00p\x00e\x00a\x00s\x00s\x00e\x00t\x00s\x00.\x00c\x00o\x00m\x00/\x00p\x00e\x00s\x00/\x00v\x001\x00/\x00e\x00m\x00o\x00t\x00i\x00c\x00o\x00n\x00s\x00/\x00s\x00m\x00i\x00l\x00e\x00/\x00v\x00i\x00e\x00w\x00s\x00/\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00_\x002\x000\x00_\x00a\x00n\x00i\x00m\x00_\x00f\x00?\x00e\x00t\x00a\x00g\x00=\x00v\x007\x002' @ 23654 : 1
-2020/06/19-11:15:17.381 38e9 Compacting 1@1 + 1@2 files
-2020/06/19-11:15:17.431 38e9 Generated table #12@1: 1820 keys, 593134 bytes
-2020/06/19-11:15:17.432 38e9 Compacted 1@1 + 1@2 files => 593134 bytes
-2020/06/19-11:15:17.468 38e9 compacted to: files[ 0 0 1 0 0 0 0 ]
-2020/06/19-11:15:17.468 38e9 Delete type=2 #9
-2020/06/19-11:15:17.468 38e9 Delete type=2 #11
-2020/06/19-11:15:17.469 38e9 Manual compaction at level-1 from '\x00\x01\x12\x02\x01a\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00-\x00a\x00s\x00m\x00.\x00s\x00e\x00c\x00u\x00r\x00e\x00.\x00s\x00k\x00y\x00p\x00e\x00a\x00s\x00s\x00e\x00t\x00s\x00.\x00c\x00o\x00m\x00/\x00p\x00e\x00s\x00/\x00v\x001\x00/\x00e\x00m\x00o\x00t\x00i\x00c\x00o\x00n\x00s\x00/\x00s\x00m\x00i\x00l\x00e\x00/\x00v\x00i\x00e\x00w\x00s\x00/\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00_\x002\x000\x00_\x00a\x00n\x00i\x00m\x00_\x00f\x00?\x00e\x00t\x00a\x00g\x00=\x00v\x007\x002' @ 23654 : 1 .. (end); will stop at (end)
+2020/06/20-09:59:56.344 6177 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/20-09:59:56.344 6177 Recovering log #18
+2020/06/20-09:59:56.344 6177 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/000018.log 
+2020/06/20-10:26:07.073 38e9 Level-0 table #23: started
+2020/06/20-10:26:07.182 38e9 Level-0 table #23: 1271279 bytes OK
+2020/06/20-10:26:07.230 38e9 Delete type=0 #18
+2020/06/20-10:26:07.231 38e9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/20-10:26:07.231 38e9 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x15\x02\x01\x17\x00m\x00u\x00l\x00t\x00i\x00p\x00l\x00e\x00q\x00u\x00o\x00t\x00i\x00n\x00g\x00-\x00w\x00i\x00n\x00d\x00o\x00w\x00s' @ 37609 : 1
+2020/06/20-10:26:07.231 38e9 Compacting 1@1 + 1@2 files
+2020/06/20-10:26:07.361 38e9 Generated table #24@1: 2799 keys, 665998 bytes
+2020/06/20-10:26:07.361 38e9 Compacted 1@1 + 1@2 files => 665998 bytes
+2020/06/20-10:26:07.417 38e9 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/06/20-10:26:07.417 38e9 Delete type=2 #20
+2020/06/20-10:26:07.417 38e9 Delete type=2 #23
+2020/06/20-10:26:07.418 38e9 Manual compaction at level-1 from '\x00\x01\x15\x02\x01\x17\x00m\x00u\x00l\x00t\x00i\x00p\x00l\x00e\x00q\x00u\x00o\x00t\x00i\x00n\x00g\x00-\x00w\x00i\x00n\x00d\x00o\x00w\x00s' @ 37609 : 1 .. (end); will stop at (end)

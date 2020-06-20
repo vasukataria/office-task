@@ -5,7 +5,7 @@
 		<div class="col-md-8 col-md-offset-2">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Admin pannel for Header
+					<h2>Admin pannel for header
 					<button class="btn btn-primary pull-right" @click="showAddModal = true"><span class="glyphicon glyphicon-plus"></span> Add data</button>
 					</h2>
 				</div>
