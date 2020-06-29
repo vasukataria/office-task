@@ -1,3 +1,15 @@
-2020/06/20-10:26:11.377 67c5 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/06/20-10:26:11.378 67c5 Recovering log #22
-2020/06/20-10:26:11.378 67c5 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/000022.log 
+2020/06/29-15:16:15.242 16a5 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/29-15:16:15.242 16a5 Recovering log #46
+2020/06/29-15:16:15.242 16a5 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/000046.log 
+2020/06/29-15:20:44.051 4565 Level-0 table #51: started
+2020/06/29-15:20:44.149 4565 Level-0 table #51: 545546 bytes OK
+2020/06/29-15:20:44.202 4565 Delete type=0 #46
+2020/06/29-15:20:44.202 4565 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/29-15:20:44.202 4565 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x12\x02\x01Z\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00-\x00a\x00s\x00m\x00.\x00s\x00e\x00c\x00u\x00r\x00e\x00.\x00s\x00k\x00y\x00p\x00e\x00a\x00s\x00s\x00e\x00t\x00s\x00.\x00c\x00o\x00m\x00/\x00p\x00e\x00s\x00/\x00v\x001\x00/\x00e\x00m\x00o\x00t\x00i\x00c\x00o\x00n\x00s\x00/\x00y\x00e\x00s\x00/\x00v\x00i\x00e\x00w\x00s\x00/\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00_\x008\x000\x00_\x00f\x00?\x00e\x00t\x00a\x00g\x00=\x00v\x005\x003' @ 73697 : 1
+2020/06/29-15:20:44.202 4565 Compacting 1@1 + 1@2 files
+2020/06/29-15:20:44.283 4565 Generated table #52@1: 5058 keys, 935618 bytes
+2020/06/29-15:20:44.283 4565 Compacted 1@1 + 1@2 files => 935618 bytes
+2020/06/29-15:20:44.317 4565 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/06/29-15:20:44.317 4565 Delete type=2 #51
+2020/06/29-15:20:44.317 4565 Delete type=2 #48
+2020/06/29-15:20:44.333 4565 Manual compaction at level-1 from '\x00\x01\x12\x02\x01Z\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00-\x00a\x00s\x00m\x00.\x00s\x00e\x00c\x00u\x00r\x00e\x00.\x00s\x00k\x00y\x00p\x00e\x00a\x00s\x00s\x00e\x00t\x00s\x00.\x00c\x00o\x00m\x00/\x00p\x00e\x00s\x00/\x00v\x001\x00/\x00e\x00m\x00o\x00t\x00i\x00c\x00o\x00n\x00s\x00/\x00y\x00e\x00s\x00/\x00v\x00i\x00e\x00w\x00s\x00/\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00_\x008\x000\x00_\x00f\x00?\x00e\x00t\x00a\x00g\x00=\x00v\x005\x003' @ 73697 : 1 .. (end); will stop at (end)

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = process.env.API_URL || 'http://localhost/officetask/database/login.php'
+const API_URL = process.env.API_URL || 'http://localhost/officetask/database'
 
 export default axios.create({
   baseURL: API_URL,

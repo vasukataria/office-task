@@ -36,13 +36,19 @@ if(isset($postdata) && !empty($postdata))
     $row    = mysqli_fetch_array($result, MYSQLI_ASSOC);  
     $count  = mysqli_num_rows($result);  
           
-    if($count == 1){  
-         echo " Login successful"; 
-         
-         
+    if($count == 1){
+        $myObj = new stdClass;;  
+        $myObj->message = "Login successful";
+        $myObj->token = '123123123';
+        
+
+        $myJSON = json_encode($myObj);
+
+        echo $myJSON;   
+               
     }  
     else{  
-        // header('WWW-Authenticate: Basic realm="My Realm"');
+        
         header('HTTP/1.0 401 Unauthorized');
         die ("Not authorized");         
     }             

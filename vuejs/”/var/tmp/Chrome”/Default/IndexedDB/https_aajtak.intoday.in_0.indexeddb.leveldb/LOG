@@ -1,0 +1,5 @@
+2020/06/29-19:47:26.520 4b24 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_aajtak.intoday.in_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/29-19:51:16.462 4565 Level-0 table #5: started
+2020/06/29-19:51:16.583 4565 Level-0 table #5: 2052 bytes OK
+2020/06/29-19:51:16.738 4565 Delete type=0 #3
+2020/06/29-19:51:16.739 4565 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

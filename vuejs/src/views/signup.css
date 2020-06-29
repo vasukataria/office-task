@@ -35,18 +35,18 @@
 	padding: 30px 40px;	
 }
 
-#form-control {
+#form-signin {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
 	position: relative;
 }
 
-#form-control label {
+#form-signin label {
 	display: inline-block;
 	margin-bottom: 5px;
 }
 
-#form-control input {
+#form-signin input {
 	border: 2px solid #f0f0f0;
 	border-radius: 4px;
 	display: block;
@@ -56,37 +56,37 @@
 	width: 100%;
 }
 
-#form-control input:focus {
+#form-signin input:focus {
 	outline: 0;
 	border-color: #777;
 }
 
-#form-control.success input {
+#form-signin.success input {
 	border-color: #2ecc71;
 }
 
-#form-control.error input {
+#form-signin.error input {
 	border-color: #e74c3c;
 }
 
-#form-control i {
+#form-signin i {
 	visibility: hidden;
 	position: absolute;
 	top: 40px;
 	right: 10px;
 }
 
-#form-control.success i.fa-check-circle {
+#form-signin.success i.fa-check-circle {
 	color: #2ecc71;
 	visibility: visible;
 }
 
-#form-control.error i.fa-exclamation-circle {
+#form-signin.error i.fa-exclamation-circle {
 	color: #e74c3c;
 	visibility: visible;
 }
 
-#form-control small {
+#form-signin small {
 	color: #e74c3c;
 	position: absolute;
 	bottom: 0;
@@ -94,7 +94,7 @@
 	visibility: hidden;
 }
 
-#form-control.error small {
+#form-signin.error small {
 	visibility: visible;
 }
 

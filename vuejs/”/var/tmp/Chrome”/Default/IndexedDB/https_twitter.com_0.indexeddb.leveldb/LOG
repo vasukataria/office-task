@@ -1,0 +1,5 @@
+2020/06/29-19:51:40.496 4cfc Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_twitter.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/29-19:51:49.879 4565 Level-0 table #5: started
+2020/06/29-19:51:50.328 4565 Level-0 table #5: 830 bytes OK
+2020/06/29-19:51:50.724 4565 Delete type=0 #3
+2020/06/29-19:51:50.724 4565 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

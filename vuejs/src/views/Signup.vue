@@ -2,38 +2,40 @@
 <div id="body">
   <div id="container">
     <div id="header">
-        <h2 id="h2">Create Account</h2>
+    <button><router-link to="/login">login</router-link></button>    
     </div>
-    <form id="form">
-        <div id="form-control">
+    <form id="form" method="post" role="signupForm" class="signupForm" @submit="userForm" action="" enctype='multipart/form-data'>
+        <h2 id="h2">Create Account</h2>
+        <br>
+        <div id="form-signin">
             <label for="username">Username</label>
-            <input type="text" placeholder="Enter your username" id="username" />
+            <input type="text" placeholder="Enter your username" id="username" name="uName" v-model="uName" />
             <i id="fas fa-check-circle"></i>
             <i id="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
-        <div id="form-control">
-            <label for="username">Email</label>
-            <input type="email" placeholder="info@example.com" id="email" />
+        <div id="form-signin">
+            <label for="email">Email</label>
+            <input type="email" placeholder="info@example.com" id="email" name="email" v-model="email" />
             <i id="fas fa-check-circle"></i>
             <i id="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
-        <div id="form-control">
-            <label for="username">Password</label>
-            <input type="password" placeholder="Password" id="password"/>
+        <div id="form-signin">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" name="pass"  v-model="pass" />
             <i id="fas fa-check-circle"></i>
             <i id="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
-        <div id="form-control">
+        <div id="form-signin">
             <label for="username">Password check</label>
             <input type="password" placeholder="Password two" id="password2"/>
             <i id="fas fa-check-circle"></i>
             <i id="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </div>
 </div>
@@ -43,20 +45,27 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
 
-@import 'signup.css';
+@import './signup.css';
 
 </style>
 <script>
-//import axios from 'axios'
+import axios from 'axios'
 export default {
   name: 'Signup',
   data(){
     return{
+      uName: null,
+      email: null,
+      pass: null,
+      isAvailable: 0,
+      responseMessage: ''
 
     }
   },
-  mounted(){
-
+  
+mounted(){
+   this.userForm(); 
+//var self= this;
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
@@ -66,6 +75,10 @@ const password2 = document.getElementById('password2');
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
+   // console.log('hello');
+   // self.getAllMembers();
+   
+
 });
 
 function checkInputs() {
@@ -75,9 +88,11 @@ function checkInputs() {
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
     
+
     if(usernameValue === '') {
         setErrorFor(username, 'Username cannot be blank');
-    } else {
+    }
+     else {
         setSuccessFor(username);
     }
     
@@ -102,25 +117,74 @@ function checkInputs() {
     } else{
         setSuccessFor(password2);
     }
+
 }
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
-    formControl.className = 'form-control error';
+    formControl.className = 'form-signin error';
     small.innerText = message;
 }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
+    formControl.className = 'form-signin success';
 }
     
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);}//eslint-disable-line      
-      }
-}
+      },
 
+
+methods:{
+  userForm:function () {
+    var username = this.username.trim();
+    if(username != ''){
+    if (this.uName && this.email && this.pass) {
+        axios({ method: "POST", 
+            url: "http://localhost/officetask/database/user.php", 
+            data: {
+                      uName : this.uName,
+                      email : this.email,
+                      pass : this.pass,
+                    }, 
+            params: {
+           username: username
+         },
+          })
+
+        .then(function (response) {
+         this.isAvailable = response.data;
+         if(response.data == 0){
+           this.responseMessage = "Username is Available.";
+         }else{
+           this.responseMessage = "Username is not Available.";
+         }
+       }) 
+        .then(request => { console.log(request);
+            if (request.status === 200){
+            this.signupSuccessful(request)
+            }else{
+                this.signupFaild()
+            }      
+        })
+      .catch(() => {  
+      this.signupFailed()
+    })
+    }
+}
+},
+signupSuccessful(){
+    this.error = false
+     this.$router.replace('/login')
+
+},
+signupFaild(){
+    this.error='Login failed!'
+}
+}
+}
 
 
 </script>

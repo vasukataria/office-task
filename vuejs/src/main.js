@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueMaterial from 'vue-material'
+import VueAxios from 'vue-axios'
+//import Vue from 'vue'
 
 
 
@@ -16,10 +18,10 @@ import 'superfish'
 
 
 
-import axios from'./backend'
+import axios from'./backend/axios'
 
 
-
+Vue.use(VueAxios, axios)
 Vue.use(VueMaterial)
 Vue.config.productionTip = false
 

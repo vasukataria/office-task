@@ -111,7 +111,6 @@ export default {
                       subject : this.subject,
                       message : this.message,
                     }, 
-            "headers": { "content-type": "application/x-www-form-urlencoded" } 
           }).then(result => {
               console.log(result.data);
               this.response = result.data;
