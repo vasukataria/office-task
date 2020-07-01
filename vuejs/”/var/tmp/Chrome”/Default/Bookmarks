@@ -1,5 +1,5 @@
 {
-   "checksum": "fbc02432ca234c6f8812c0169fa9e735",
+   "checksum": "9e9899206c73f16e1a524a12620624da",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -30,9 +30,16 @@
             "name": "Authorization Code: Saving the Token & Handling Failures > OAuth2 in 8 Steps | SymfonyCasts",
             "type": "url",
             "url": "https://symfonycasts.com/screencast/oauth/authorization-code2"
+         }, {
+            "date_added": "13237989294913227",
+            "guid": "285a7159-b8b2-4f7e-bea1-cdc28a4797d8",
+            "id": "13",
+            "name": "New Tab",
+            "type": "url",
+            "url": "chrome://newtab/"
          } ],
          "date_added": "13237116098550955",
-         "date_modified": "13237631682914166",
+         "date_modified": "13237989294913227",
          "guid": "00000000-0000-4000-a000-000000000002",
          "id": "1",
          "name": "Bookmarks bar",

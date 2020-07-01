@@ -1,0 +1,35 @@
+var app = new Vue({
+  el: '#myapp',
+  data: {
+    username: '',
+    isAvailable: 0,
+    responseMessage: ''
+  },
+  methods: {
+    checkUsername: function(){
+      var username = this.username.trim();
+      if(username != ''){
+ 
+       axios.get('ajaxfile.php', {
+         params: {
+           username: username
+         }
+       })
+       .then(function (response) {
+         app.isAvailable = response.data;
+         if(response.data == 0){
+           app.responseMessage = "Username is Available.";
+         }else{
+           app.responseMessage = "Username is not Available.";
+         }
+       })
+       .catch(function (error) {
+         console.log(error);
+       });
+
+     }else{
+       this.responseMessage = "";
+     }
+   }
+  }
+})

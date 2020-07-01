@@ -1,0 +1,5 @@
+2020/06/30-15:59:56.253 7bbd Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.storyblok.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/30-16:00:29.697 2e7d Level-0 table #5: started
+2020/06/30-16:00:29.773 2e7d Level-0 table #5: 1637 bytes OK
+2020/06/30-16:00:29.821 2e7d Delete type=0 #3
+2020/06/30-16:00:29.821 2e7d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

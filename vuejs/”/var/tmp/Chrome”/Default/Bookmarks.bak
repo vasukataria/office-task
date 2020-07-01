@@ -1,5 +1,5 @@
 {
-   "checksum": "872dd7e87608547ee3fe15e8509586ca",
+   "checksum": "fbc02432ca234c6f8812c0169fa9e735",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -23,9 +23,16 @@
             "name": "Admin and user login in php and mysql database | CodeWithAwa",
             "type": "url",
             "url": "https://codewithawa.com/posts/admin-and-user-login-in-php-and-mysql-database"
+         }, {
+            "date_added": "13237631682914166",
+            "guid": "a402b3bf-f728-46b4-8f07-c7c258aeacea",
+            "id": "11",
+            "name": "Authorization Code: Saving the Token & Handling Failures > OAuth2 in 8 Steps | SymfonyCasts",
+            "type": "url",
+            "url": "https://symfonycasts.com/screencast/oauth/authorization-code2"
          } ],
          "date_added": "13237116098550955",
-         "date_modified": "13237559492332804",
+         "date_modified": "13237631682914166",
          "guid": "00000000-0000-4000-a000-000000000002",
          "id": "1",
          "name": "Bookmarks bar",

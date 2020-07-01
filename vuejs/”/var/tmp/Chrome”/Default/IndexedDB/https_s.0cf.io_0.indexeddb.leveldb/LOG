@@ -1,7 +1,8 @@
-2020/06/22-11:45:40.338 3768 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_s.0cf.io_0.indexeddb.leveldb/MANIFEST-000001
-2020/06/22-11:45:40.338 3768 Recovering log #3
-2020/06/22-11:45:40.490 3768 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_s.0cf.io_0.indexeddb.leveldb/000003.log 
-2020/06/22-11:46:55.702 1b47 Level-0 table #5: started
-2020/06/22-11:46:55.775 1b47 Level-0 table #5: 57093 bytes OK
-2020/06/22-11:46:55.878 1b47 Delete type=0 #3
-2020/06/22-11:46:55.878 1b47 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/30-13:28:39.826 4947 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_s.0cf.io_0.indexeddb.leveldb/MANIFEST-000001
+2020/06/30-13:28:39.826 4947 Recovering log #15
+2020/06/30-13:28:39.826 4947 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_s.0cf.io_0.indexeddb.leveldb/000015.log 
+2020/06/30-13:29:13.027 2e7d Level-0 table #20: started
+2020/06/30-13:29:13.027 2e7d Level-0 table #20: 0 bytes OK
+2020/06/30-13:29:13.090 2e7d Delete type=0 #15
+2020/06/30-13:29:13.090 2e7d Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/06/30-13:29:13.090 2e7d Manual compaction at level-1 from (begin) .. (end); will stop at (end)

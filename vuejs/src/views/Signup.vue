@@ -49,7 +49,8 @@
 
 </style>
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+import Vue from 'vue'
 export default {
   name: 'Signup',
   data(){
@@ -57,14 +58,12 @@ export default {
       uName: null,
       email: null,
       pass: null,
-      isAvailable: 0,
-      responseMessage: ''
 
     }
   },
   
 mounted(){
-   this.userForm(); 
+   this.userForm();  
 //var self= this;
 const form = document.getElementById('form');
 const username = document.getElementById('username');
@@ -88,11 +87,9 @@ function checkInputs() {
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
     
-
     if(usernameValue === '') {
         setErrorFor(username, 'Username cannot be blank');
-    }
-     else {
+    } else {
         setSuccessFor(username);
     }
     
@@ -139,49 +136,45 @@ function isEmail(email) {
 
 methods:{
   userForm:function () {
-    var username = this.username.trim();
-    if(username != ''){
     if (this.uName && this.email && this.pass) {
-        axios({ method: "POST", 
-            url: "http://localhost/officetask/database/user.php", 
-            data: {
+        fetch("http://localhost/officetask/database/user.php",{
+            method: "POST", 
+            body: JSON.stringify({
                       uName : this.uName,
                       email : this.email,
                       pass : this.pass,
-                    }, 
-            params: {
-           username: username
-         },
-          })
+                    }),
+          }).then(request => { 
+            console.log(request);
+            request.text().then((message) => {
+                if(request.status === 409){
+                    Vue.$toast.open(message);
 
-        .then(function (response) {
-         this.isAvailable = response.data;
-         if(response.data == 0){
-           this.responseMessage = "Username is Available.";
-         }else{
-           this.responseMessage = "Username is not Available.";
-         }
-       }) 
-        .then(request => { console.log(request);
-            if (request.status === 200){
-            this.signupSuccessful(request)
-            }else{
-                this.signupFaild()
-            }      
+                    this.userValidation()
+                    //console.log('hello');
+                } else if (request.status === 200){
+                this.signupSuccessful()
+                }else{
+                    this.signupFailed()
+                } 
+            })
+                 
         })
       .catch(() => {  
       this.signupFailed()
     })
     }
-}
 },
 signupSuccessful(){
-    this.error = false
+     this.error = false
      this.$router.replace('/login')
 
 },
-signupFaild(){
+signupFailed(){
     this.error='Login failed!'
+},
+userValidation(){
+    this.error=''
 }
 }
 }
