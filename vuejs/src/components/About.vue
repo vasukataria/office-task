@@ -3,30 +3,17 @@
 <div class="container">
 <div class="row about-container">
 
-<div class="col-lg-6 content order-lg-1 order-2">
-<h2 class="title">Few Words About  </h2>
+<div class="col-lg-6 content order-lg-1 order-2" v-for="elements in about" :key="elements">
+<h2 class="title">{{elements.parentTitle}}</h2>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{{elements.parentDesc}}
 </p>
 
 <div class="icon-box wow fadeInUp">
 <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-<h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-<p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+<h4 class="title"><a href="">{{elements.ChildTitle}}</a></h4>
+<p class="description">{{elements.ChildDesc}}</p>
 </div>
-
-<div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-<div class="icon"><i class="fa fa-photo"></i></div>
-<h4 class="title"><a href="">Magni Dolores</a></h4>
-<p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-</div>
-
-<div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-<div class="icon"><i class="fa fa-bar-chart"></i></div>
-<h4 class="title"><a href="">Dolor Sitema</a></h4>
-<p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-</div>
-
 </div>
 
 <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
@@ -35,3 +22,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 </section>
 </template>
+<script>
+import axios from 'axios'
+ export default{
+  name: 'about',
+   data:() =>{
+    return{
+      about:[]
+    }
+    },
+     methods: {
+        getabout: function () {
+         axios
+      .get('http://localhost/officetask/database/about.php')
+      .then(response => {
+        this.about = response.data
+      })
+      }
+    },
+    beforeMount() {
+      this.getabout()
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+	
+

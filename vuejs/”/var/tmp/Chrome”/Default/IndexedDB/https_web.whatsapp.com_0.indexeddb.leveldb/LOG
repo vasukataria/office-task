@@ -1,5 +1,0 @@
-2020/06/26-16:11:03.035 7c2b Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/06/26-16:11:56.136 3e68 Level-0 table #5: started
-2020/06/26-16:11:56.525 3e68 Level-0 table #5: 98936 bytes OK
-2020/06/26-16:11:56.660 3e68 Delete type=0 #3
-2020/06/26-16:11:56.696 3e68 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

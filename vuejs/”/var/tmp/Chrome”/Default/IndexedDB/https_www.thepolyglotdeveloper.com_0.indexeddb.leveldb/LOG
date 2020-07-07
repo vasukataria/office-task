@@ -1,5 +1,0 @@
-2020/06/26-11:25:10.497 37cb Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.thepolyglotdeveloper.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/06/26-11:25:54.771 3e68 Level-0 table #5: started
-2020/06/26-11:25:54.809 3e68 Level-0 table #5: 14385 bytes OK
-2020/06/26-11:25:54.844 3e68 Delete type=0 #3
-2020/06/26-11:25:54.844 3e68 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

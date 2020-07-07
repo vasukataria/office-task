@@ -1,9 +1,33 @@
 <template>
 <section id="hero">
-    <div class="hero-container">
-      <h1>Welcome to Regna</h1>
-      <h2>We are team of talanted designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started">Get Started</a>
+    <div class="hero-container" v-for="element in hero" :key="element" >
+      <h1>{{ element.title }}</h1>
+      <h2>{{ element.desc }}</h2>
+      <a href="#about" class="btn-get-started">{{ element.buttonName }}</a>
     </div>
   </section>
 </template>
+<script>
+import axios from 'axios'
+ export default{
+  name: 'hero',
+   data:() =>{
+    return{
+      hero:[]
+    }
+    },
+     methods: {
+        gethero: function () {
+         axios
+      .get('http://localhost/officetask/database/hero.php')
+      .then(response => {
+        this.hero = response.data
+      })
+      }
+    },
+    beforeMount() {
+      this.gethero()
+    }
+}
+
+</script>

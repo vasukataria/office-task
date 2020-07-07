@@ -27,6 +27,9 @@ import axios from 'axios'
       practice:[]
     }
     },
+    mounted(){
+      this.getPractice()
+    },
      methods: {
         getPractice: function () {
          axios
@@ -36,9 +39,6 @@ import axios from 'axios'
       })
       }
     },
-    beforeMount() {
-      this.getPractice()
-    }
 }
 
 </script>
