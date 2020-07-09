@@ -1,6 +1,6 @@
 <template>
 <section id="hero">
-    <div class="hero-container" v-for="element in hero" :key="element" >
+    <div class="hero-container" v-for="element in hero" :key="element.id" >
       <h1>{{ element.title }}</h1>
       <h2>{{ element.desc }}</h2>
       <a href="#about" class="btn-get-started">{{ element.buttonName }}</a>

@@ -1,0 +1,61 @@
+{
+   "checksum": "c9b427d11fd2718d7435f1e9611ea88f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13238666682899059",
+            "guid": "92fb00a5-97c9-4145-9a30-35b60ce3e912",
+            "id": "5",
+            "name": "Gmail",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         }, {
+            "date_added": "13238666682934633",
+            "guid": "f7b597bf-2198-4540-b74a-6ebd94ab0ca9",
+            "id": "6",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://youtube.com/"
+         }, {
+            "date_added": "13238666682935642",
+            "guid": "871ea7c7-a018-4dfe-af10-39c545475396",
+            "id": "7",
+            "name": "Maps",
+            "type": "url",
+            "url": "https://maps.google.com/"
+         }, {
+            "date_added": "13238675863142188",
+            "guid": "c8bab635-1c6c-4f11-bc0c-2a204df0e247",
+            "id": "9",
+            "name": "Using v-for loop - Material Design for Bootstrap",
+            "type": "url",
+            "url": "https://mdbootstrap.com/education/vue/agenda-app-5-v-for/"
+         } ],
+         "date_added": "13238666670924901",
+         "date_modified": "13238675863142188",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13238666670924918",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13238666670924922",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

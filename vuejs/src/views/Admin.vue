@@ -1,6 +1,8 @@
 <template>
+	<div>
+	<Adminheader/>
 <div class="container">
-	<h1 class="page-header text-center"></h1>
+	
 	<div id="members">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="row">
@@ -132,12 +134,16 @@
 </div>
 	</div>
 </div>
-
+</div>
 </template>
 <script>
 import axios from 'axios'
+import Adminheader from '@/components/Adminheader.vue'
 export default{
 	name: 'Admin',
+	components:{
+		Adminheader
+	},
 	data(){
 		return{
 		showAddModal: false,

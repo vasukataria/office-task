@@ -1,0 +1,6 @@
+2020/07/09-16:51:58.276 4fb1 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
+2020/07/09-16:51:58.276 4fb1 Recovering log #31
+2020/07/09-16:51:58.325 4fb1 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000031.log 
+2020/07/09-18:07:44.014 6302 Level-0 table #35: started
+2020/07/09-18:07:44.137 6302 Level-0 table #35: 13175 bytes OK
+2020/07/09-18:07:44.179 6302 Delete type=0 #31

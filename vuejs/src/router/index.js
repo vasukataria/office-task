@@ -4,8 +4,15 @@ import Home from '../views/Home.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Admin from '../views/Admin.vue'
-import Adminheader from '../views/Adminheader.vue'
-import Header from '../views/Header.vue'
+import AdminHeader from '../views/AdminHeader.vue'
+import Adminfooter from '../views/Adminfooter.vue'
+import Adminabout from '../views/Adminabout.vue'
+import Adminaction from '../views/Adminaction.vue'
+import AdminFact from '../views/AdminFact.vue'
+import AdminHero from '../views/AdminHero.vue'
+import AdminServices from '../views/AdminServices.vue'
+import AdminPortfolio from '../views/AdminPortfolio.vue'
+import AdminTeam from '../views/AdminTeam.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -29,15 +36,50 @@ Vue.use(VueRouter)
     name: 'Admin',
     component: Admin
   },
-     {
-    path: '/Adminheader',
-    name: 'Adminheaders',
-    component: Adminheader
+  {
+    path: '/AdminHeader',
+    name: 'AdminHeader',
+    component: AdminHeader
   },
   {
-    path: '/Header',
-    name: 'Header',
-    component: Header
+    path: '/Adminfooter',
+    name: 'Adminfooter',
+    component: Adminfooter
+  },
+  {
+    path: '/Adminabout',
+    name: 'Adminabout',
+    component: Adminabout
+  },
+  {
+    path: '/Adminaction',
+    name: 'Adminaction',
+    component: Adminaction
+  },
+  {
+    path: '/AdminFact',
+    name: 'AdminFact',
+    component: AdminFact
+  },
+  {
+    path: '/AdminHero',
+    name: 'AdminFact',
+    component: AdminHero
+  },
+  {
+    path: '/AdminServices',
+    name: 'AdminServices',
+    component: AdminServices
+  },
+  {
+    path: '/AdminPortfolio',
+    name: 'AdminPortfolio',
+    component: AdminPortfolio
+  },
+    {
+    path: '/AdminTeam',
+    name: 'AdminTeam',
+    component: AdminTeam
   },
 ]
 

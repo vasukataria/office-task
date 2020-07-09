@@ -10,7 +10,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li v-for="element in practice" :key="element">
+          <li v-for="element in practice" :key="element.id">
             <router-link :to="element.link">{{element.name}}</router-link>
           </li>
         </ul>

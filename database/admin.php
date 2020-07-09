@@ -3,31 +3,13 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
-
-$name="";                                 
+session_start();
+include_once("mydb.php");
+$name="";																	
 $email = "";
 $message = "";
 $subject = "";
 $policies = [];
-
-
- $servername = "localhost";
- $database = "mydb";
- $username = "root";
- $password = "";
- 
- // Create connection
- 
- $conn = mysqli_connect($servername, $username, $password, $database);
- 
- // Check connection
- 
- if ($conn->connect_error) {
- die("Connection failed: " . $conn->connect_error);
- }
- 
- //echo 'Connected successfully' ;
-//echo json_encode($_POST);
 $out = array('error' => false);
 
 $crud = 'read';

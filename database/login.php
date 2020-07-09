@@ -3,24 +3,17 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+include_once("mydb.php");
+
+if(isset($_COOKIE["type"]))
+{
+ echo $myJSON;
+}
 
 $username = "";
 $password = "";
 
-$database = "mydb";
-$username = "root";
-$password = "";
- 
- // Create connection
 
- $servername = "localhost";
- $conn = mysqli_connect($servername, $username, $password, $database);
-
- 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-  
 $postdata = file_get_contents("php://input");
 
 if(isset($postdata) && !empty($postdata))
@@ -37,14 +30,16 @@ if(isset($postdata) && !empty($postdata))
     $count  = mysqli_num_rows($result);  
           
     if($count == 1){
+        
         $myObj = new stdClass;;  
         $myObj->message = "Login successful";
-        $myObj->token = '123123123';
+        $myObj->token = md5(date('Y-m-d h:i:s'));
         
 
         $myJSON = json_encode($myObj);
-
-        echo $myJSON;   
+        session_start();
+        setcookie("data", $myJSON, time()+ 60*60*60,'/');
+       echo $myJSON;   
                
     }  
     else{  

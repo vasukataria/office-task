@@ -2,17 +2,19 @@
 <section id="about">
 <div class="container">
 <div class="row about-container">
-
-<div class="col-lg-6 content order-lg-1 order-2" v-for="elements in about" :key="elements">
-<h2 class="title">{{elements.parentTitle}}</h2>
+	
+<div class="col-lg-6 content order-lg-1 order-2" >
+<h2 class="title">Few Words About </h2>
 <p>
-{{elements.parentDesc}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
-
+<div v-for="row in about" :key="row.id">
 <div class="icon-box wow fadeInUp">
-<div class="icon"><i class="fa fa-shopping-bag"></i></div>
-<h4 class="title"><a href="">{{elements.ChildTitle}}</a></h4>
-<p class="description">{{elements.ChildDesc}}</p>
+<div class="icon"><i :class="row.class"></i></div>
+<h4 class="title"><a href="">{{row.ChildTitle}}</a></h4>
+<p class="description">{{row.ChildDesc}}</p>
+</div>
+
 </div>
 </div>
 
@@ -22,6 +24,7 @@
 </div>
 </section>
 </template>
+
 <script>
 import axios from 'axios'
  export default{
@@ -46,15 +49,3 @@ import axios from 'axios'
 }
 
 </script>
-
-
-
-
-
-
-
-
-
-
-	
-

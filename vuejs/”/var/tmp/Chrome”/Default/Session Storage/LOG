@@ -1,0 +1,24 @@
+2020/07/09-23:38:49.760 6b30 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Session Storage/MANIFEST-000001
+2020/07/09-23:38:49.760 6b30 Recovering log #9
+2020/07/09-23:38:49.879 6b30 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Session Storage/000009.log 
+2020/07/10-00:30:52.688 3ed Level-0 table #13: started
+2020/07/10-00:30:52.746 3ed Level-0 table #13: 19668 bytes OK
+2020/07/10-00:30:52.823 3ed Delete type=0 #9
+2020/07/10-03:32:21.850 3ed Level-0 table #15: started
+2020/07/10-03:32:21.900 3ed Level-0 table #15: 16664 bytes OK
+2020/07/10-03:32:21.976 3ed Delete type=0 #12
+2020/07/10-03:41:12.363 3ed Level-0 table #17: started
+2020/07/10-03:41:12.431 3ed Level-0 table #17: 27634 bytes OK
+2020/07/10-03:41:12.499 3ed Delete type=0 #14
+2020/07/10-03:41:12.499 3ed Compacting 4@0 + 1@1 files
+2020/07/10-03:41:12.565 3ed Generated table #18@0: 598 keys, 36821 bytes
+2020/07/10-03:41:12.565 3ed Compacted 4@0 + 1@1 files => 36821 bytes
+2020/07/10-03:41:12.609 3ed compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/07/10-03:41:12.609 3ed Delete type=2 #17
+2020/07/10-03:41:12.609 3ed Delete type=2 #8
+2020/07/10-03:41:12.609 3ed Delete type=2 #15
+2020/07/10-03:41:12.609 3ed Delete type=2 #10
+2020/07/10-03:41:12.609 3ed Delete type=2 #13
+2020/07/10-03:55:31.386 3ed Level-0 table #20: started
+2020/07/10-03:55:31.456 3ed Level-0 table #20: 18838 bytes OK
+2020/07/10-03:55:31.531 3ed Delete type=0 #16
