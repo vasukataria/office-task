@@ -1,5 +1,15 @@
-2020/07/08-02:14:16.694 5c87 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/MANIFEST-000001
-2020/07/08-02:15:00.000 4eca Level-0 table #5: started
-2020/07/08-02:15:00.080 4eca Level-0 table #5: 63384 bytes OK
-2020/07/08-02:15:00.110 4eca Delete type=0 #3
-2020/07/08-02:15:00.110 4eca Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/07/14-01:45:54.833 2cc8 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/MANIFEST-000001
+2020/07/14-01:45:54.833 2cc8 Recovering log #4
+2020/07/14-01:45:54.833 2cc8 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/000004.log 
+2020/07/14-01:46:27.852 1ae8 Level-0 table #8: started
+2020/07/14-01:46:27.885 1ae8 Level-0 table #8: 190 bytes OK
+2020/07/14-01:46:27.919 1ae8 Delete type=0 #4
+2020/07/14-01:46:27.919 1ae8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/07/14-01:46:27.937 1ae8 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 2924 : 1
+2020/07/14-01:46:27.937 1ae8 Compacting 1@1 + 1@2 files
+2020/07/14-01:46:27.974 1ae8 Generated table #9@1: 498 keys, 28832 bytes
+2020/07/14-01:46:27.974 1ae8 Compacted 1@1 + 1@2 files => 28832 bytes
+2020/07/14-01:46:28.007 1ae8 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/07/14-01:46:28.007 1ae8 Delete type=2 #8
+2020/07/14-01:46:28.007 1ae8 Delete type=2 #5
+2020/07/14-01:46:28.019 1ae8 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 2924 : 1 .. (end); will stop at (end)

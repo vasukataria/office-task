@@ -1,16 +1,15 @@
-2020/07/07-16:21:46.578 4f6c Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/07/08-00:53:02.499 4eca Level-0 table #5: started
-2020/07/08-00:53:02.919 4eca Level-0 table #5: 1469811 bytes OK
-2020/07/08-00:53:03.329 4eca Delete type=0 #3
-2020/07/08-00:56:34.079 4eca Level-0 table #7: started
-2020/07/08-00:56:34.167 4eca Level-0 table #7: 174241 bytes OK
-2020/07/08-00:56:34.195 4eca Delete type=0 #4
-2020/07/08-00:56:34.195 4eca Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2020/07/08-00:56:34.195 4eca Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x08\x1f\x04\x02\x03\x00\x00\x00\x00\x00\x00\x08@\x03\x00p\xb7\xdc\xab2wB\x00\x01$\x00d\x00e\x00e\x007\x00a\x006\x008\x00e\x00-\x003\x002\x00b\x004\x00-\x004\x00b\x006\x002\x00-\x009\x00b\x002\x003\x00-\x007\x006\x00b\x009\x00d\x000\x00c\x005\x001\x004\x00d\x009' @ 11874 : 1
-2020/07/08-00:56:34.196 4eca Compacting 1@1 + 1@2 files
-2020/07/08-00:56:34.268 4eca Generated table #8@1: 1530 keys, 512758 bytes
-2020/07/08-00:56:34.268 4eca Compacted 1@1 + 1@2 files => 512758 bytes
-2020/07/08-00:56:34.306 4eca compacted to: files[ 0 0 1 0 0 0 0 ]
-2020/07/08-00:56:34.306 4eca Delete type=2 #5
-2020/07/08-00:56:34.307 4eca Delete type=2 #7
-2020/07/08-00:56:34.308 4eca Manual compaction at level-1 from '\x00\x01\x08\x1f\x04\x02\x03\x00\x00\x00\x00\x00\x00\x08@\x03\x00p\xb7\xdc\xab2wB\x00\x01$\x00d\x00e\x00e\x007\x00a\x006\x008\x00e\x00-\x003\x002\x00b\x004\x00-\x004\x00b\x006\x002\x00-\x009\x00b\x002\x003\x00-\x007\x006\x00b\x009\x00d\x000\x00c\x005\x001\x004\x00d\x009' @ 11874 : 1 .. (end); will stop at (end)
+2020/07/13-15:14:03.969 1f18 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/07/13-15:14:03.969 1f18 Recovering log #10
+2020/07/13-15:14:03.969 1f18 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/000010.log 
+2020/07/13-15:15:32.324 1da9 Level-0 table #15: started
+2020/07/13-15:15:32.379 1da9 Level-0 table #15: 227963 bytes OK
+2020/07/13-15:15:32.415 1da9 Delete type=0 #10
+2020/07/13-15:15:32.415 1da9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/07/13-15:15:32.416 1da9 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x12\x02\x01Z\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00-\x00a\x00s\x00m\x00.\x00s\x00e\x00c\x00u\x00r\x00e\x00.\x00s\x00k\x00y\x00p\x00e\x00a\x00s\x00s\x00e\x00t\x00s\x00.\x00c\x00o\x00m\x00/\x00p\x00e\x00s\x00/\x00v\x001\x00/\x00e\x00m\x00o\x00t\x00i\x00c\x00o\x00n\x00s\x00/\x00y\x00e\x00s\x00/\x00v\x00i\x00e\x00w\x00s\x00/\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00_\x002\x000\x00_\x00f\x00?\x00e\x00t\x00a\x00g\x00=\x00v\x005\x003' @ 20544 : 1
+2020/07/13-15:15:32.416 1da9 Compacting 1@1 + 1@2 files
+2020/07/13-15:15:32.491 1da9 Generated table #16@1: 3008 keys, 1021791 bytes
+2020/07/13-15:15:32.491 1da9 Compacted 1@1 + 1@2 files => 1021791 bytes
+2020/07/13-15:15:32.525 1da9 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/07/13-15:15:32.526 1da9 Delete type=2 #12
+2020/07/13-15:15:32.526 1da9 Delete type=2 #15
+2020/07/13-15:15:32.526 1da9 Manual compaction at level-1 from '\x00\x03\x12\x02\x01Z\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00s\x00t\x00a\x00t\x00i\x00c\x00-\x00a\x00s\x00m\x00.\x00s\x00e\x00c\x00u\x00r\x00e\x00.\x00s\x00k\x00y\x00p\x00e\x00a\x00s\x00s\x00e\x00t\x00s\x00.\x00c\x00o\x00m\x00/\x00p\x00e\x00s\x00/\x00v\x001\x00/\x00e\x00m\x00o\x00t\x00i\x00c\x00o\x00n\x00s\x00/\x00y\x00e\x00s\x00/\x00v\x00i\x00e\x00w\x00s\x00/\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00_\x002\x000\x00_\x00f\x00?\x00e\x00t\x00a\x00g\x00=\x00v\x005\x003' @ 20544 : 1 .. (end); will stop at (end)

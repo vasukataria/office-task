@@ -13,6 +13,7 @@ import AdminHero from '../views/AdminHero.vue'
 import AdminServices from '../views/AdminServices.vue'
 import AdminPortfolio from '../views/AdminPortfolio.vue'
 import AdminTeam from '../views/AdminTeam.vue'
+import AdminHomepage from '../views/AdminHomepage'
 Vue.use(VueRouter)
 
   const routes = [
@@ -32,38 +33,53 @@ Vue.use(VueRouter)
     component: Login
   },
    {
+    path: '/AdminHomepage',
+    name: 'Homepage',
+    component: AdminHomepage,
+    beforeEnter(to,from,next){
+    let currentUser =JSON.parse(window.localstorage.currentUser);
+    if(currentUser && currentUser.username){
+      next();
+    }else{
+      next("/Login")
+    }
+
+  },  
+    children:[
+    {
     path: '/Admin',
     name: 'Admin',
     component: Admin
-  },
-  {
+    },
+    {
     path: '/AdminHeader',
-    name: 'AdminHeader',
+    name: '/AdminHeader',
     component: AdminHeader
-  },
-  {
+    },
+
+    {
     path: '/Adminfooter',
     name: 'Adminfooter',
     component: Adminfooter
-  },
-  {
+    },
+    {
     path: '/Adminabout',
     name: 'Adminabout',
     component: Adminabout
-  },
-  {
+    },
+    {
     path: '/Adminaction',
     name: 'Adminaction',
     component: Adminaction
-  },
-  {
+    },
+      {
     path: '/AdminFact',
     name: 'AdminFact',
     component: AdminFact
   },
   {
     path: '/AdminHero',
-    name: 'AdminFact',
+    name: 'AdminHero',
     component: AdminHero
   },
   {
@@ -81,8 +97,9 @@ Vue.use(VueRouter)
     name: 'AdminTeam',
     component: AdminTeam
   },
-]
-
+    ]
+  },
+  ]
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,

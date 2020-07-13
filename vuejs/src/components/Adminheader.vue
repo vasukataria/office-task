@@ -59,12 +59,12 @@
           </md-list-item>
 
           <md-list-item>
-          <span class="md-list-item-text"><router-link to="/AdmiPortfolio">Portfolio</router-link>
+          <span class="md-list-item-text"><router-link to="/AdminPortfolio">Portfolio</router-link>
           </span>
           </md-list-item>
 
           <md-list-item>
-          <span class="md-list-item-text"><router-link to="/AdminService">Service</router-link>
+          <span class="md-list-item-text"><router-link to="/AdminServices">Service</router-link>
           </span>
           </md-list-item>
 

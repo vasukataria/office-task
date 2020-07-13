@@ -1,6 +1,6 @@
 <template>
 <div>
-	<Adminheader />
+	
 <div class="container">
 	<div id="members">
 		<div class="col-md-8 col-md-offset-2">
@@ -118,11 +118,11 @@
 </template>
 <script>
 import axios from 'axios'
-import Adminheader from '@/components/Adminheader.vue'
+//import Adminheader from '@/components/Adminheader.vue'
 export default{
 	name: 'Header',
 	components:{
-		Adminheader
+		//Adminheader
 	},
 	data(){
 		return{
