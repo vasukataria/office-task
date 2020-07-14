@@ -5,7 +5,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 header ("Content-type: image/jpg");
 
 
-session_start();
+
 include_once("mydb.php");
 
 

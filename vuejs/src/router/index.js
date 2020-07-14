@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Signup from '../views/Signup.vue'
-import Login from '../views/Login.vue'
+import login from '../views/login.vue'
 import Admin from '../views/Admin.vue'
 import AdminHeader from '../views/AdminHeader.vue'
 import Adminfooter from '../views/Adminfooter.vue'
@@ -28,23 +28,26 @@ Vue.use(VueRouter)
     component: Signup
   },
   {
-    path: '/Login',
-    name: 'Login',
-    component: Login
+    path: '/login',
+    name: 'login',
+    component: login
   },
    {
     path: '/AdminHomepage',
     name: 'Homepage',
     component: AdminHomepage,
     beforeEnter(to,from,next){
-    let currentUser =JSON.parse(window.localstorage.currentUser);
-    if(currentUser && currentUser.username){
-      next();
-    }else{
-      next("/Login")
-    }
-
-  },  
+      var isAuthenticated= false;
+    if(localStorage.getItem('LoggedUser'))
+      isAuthenticated = true;
+    else
+    isAuthenticated= false;
+    if(isAuthenticated) {
+   next(); // allow to enter route
+    } else{
+   next('/login'); // go to '/login';
+  }
+    },
     children:[
     {
     path: '/Admin',

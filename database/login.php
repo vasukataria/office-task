@@ -39,7 +39,7 @@ if(isset($postdata) && !empty($postdata))
         $myJSON = json_encode($myObj);
         session_start();
         setcookie("data", $myJSON, time()+ 60*60*60,'/');
-       echo $myJSON;   
+         echo $myJSON;   
                
     }  
     else{  
