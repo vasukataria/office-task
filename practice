@@ -1,0 +1,12 @@
+beforeEnter(to,from,next){
+      
+    if(localStorage.getItem('LoggedUser'))
+      isAuthenticated = true;
+    else
+    isAuthenticated= false;
+    if(isAuthenticated) {
+   next(); // allow to enter route
+    } else{
+   next('/login'); // go to '/login';
+  }
+    },

@@ -1,8 +1,8 @@
-2020/07/14-00:46:06.634 1c07 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/07/14-00:46:06.635 1c07 Recovering log #56
-2020/07/14-00:46:06.635 1c07 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000056.log 
-2020/07/14-03:33:10.140 1ae8 Level-0 table #61: started
-2020/07/14-03:33:10.217 1ae8 Level-0 table #61: 0 bytes OK
-2020/07/14-03:33:10.385 1ae8 Delete type=0 #56
-2020/07/14-03:33:10.385 1ae8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2020/07/14-03:33:10.385 1ae8 Manual compaction at level-1 from (begin) .. (end); will stop at (end)
+2020/07/15-11:37:05.767 24b3 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/07/15-11:37:05.767 24b3 Recovering log #63
+2020/07/15-11:37:05.767 24b3 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000063.log 
+2020/07/15-11:37:37.761 2502 Level-0 table #68: started
+2020/07/15-11:37:37.761 2502 Level-0 table #68: 0 bytes OK
+2020/07/15-11:37:37.836 2502 Delete type=0 #63
+2020/07/15-11:37:37.837 2502 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/07/15-11:37:37.837 2502 Manual compaction at level-1 from (begin) .. (end); will stop at (end)
