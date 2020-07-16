@@ -1,9 +1,6 @@
-2020/07/15-10:41:27.105 1acd Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
-2020/07/15-10:41:27.105 1acd Recovering log #69
-2020/07/15-10:41:27.200 1acd Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000069.log 
-2020/07/15-11:38:39.263 2597 Level-0 table #74: started
-2020/07/15-11:38:39.353 2597 Level-0 table #74: 17602 bytes OK
-2020/07/15-11:38:39.399 2597 Delete type=0 #69
-2020/07/15-11:54:57.709 2597 Level-0 table #76: started
-2020/07/15-11:54:57.782 2597 Level-0 table #76: 17124 bytes OK
-2020/07/15-11:54:57.828 2597 Delete type=0 #73
+2020/07/16-16:22:44.469 2cb0 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
+2020/07/16-16:22:44.469 2cb0 Recovering log #75
+2020/07/16-16:22:44.815 2cb0 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000075.log 
+2020/07/16-16:46:41.987 3794 Level-0 table #79: started
+2020/07/16-16:46:42.048 3794 Level-0 table #79: 38894 bytes OK
+2020/07/16-16:46:42.101 3794 Delete type=0 #75

@@ -37,11 +37,13 @@ Vue.use(VueRouter)
     name: 'Homepage',
     component: AdminHomepage,
     
-    beforeRouteEnter(to, from, next) {
-    var isAuthenticated= false;
-    if(!isAuthenticated) {
-    next('/login');
-     }
+    beforeEnter(to,from,next){ 
+    if(localStorage.getItem('login')){
+      next();
+    }
+    else{
+      next('/login');
+    }
     },
     children:[
     {

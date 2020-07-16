@@ -117,7 +117,7 @@ function setSuccessFor(input) {
 
      localStorage.token = req.data.token
      this.error = false
-     this.$router.replace('/Admin')
+     this.$router.push('/Admin')
      },
 
     loginFailed () {

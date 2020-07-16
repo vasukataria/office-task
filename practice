@@ -10,3 +10,11 @@ beforeEnter(to,from,next){
    next('/login'); // go to '/login';
   }
     },
+
+
+     beforeRouteEnter(to, from, next) {
+    var isAuthenticated= false;
+    if(!isAuthenticated) {
+    next('/login');
+     }
+    },
