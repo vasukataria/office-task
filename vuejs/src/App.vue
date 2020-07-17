@@ -51,14 +51,6 @@ export default {
   new WOW().init();
 
   // Initiate superfish on nav menu
- jQuery(document).ready(function(){
-    $('.nav-menu').superfish({
-    animation: {
-      opacity: 'show'
-    },
-    speed: 400
-  });
-  });
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
     var $mobile_nav = $('#nav-menu-container').clone().prop({
@@ -151,11 +143,7 @@ export default {
   });
 
   // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
+ 
   // custom code
 
 });

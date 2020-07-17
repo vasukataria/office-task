@@ -1,3 +1,39 @@
-2020/07/17-00:47:10.173 1c85 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
-2020/07/17-00:47:10.444 1c85 Recovering log #78
-2020/07/17-00:47:10.573 1c85 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000078.log 
+2020/07/17-10:40:19.431 1c31 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
+2020/07/17-10:40:19.432 1c31 Recovering log #78
+2020/07/17-10:40:19.676 1c31 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000078.log 
+2020/07/17-11:12:39.219 2c37 Level-0 table #82: started
+2020/07/17-11:12:39.290 2c37 Level-0 table #82: 60903 bytes OK
+2020/07/17-11:12:39.339 2c37 Delete type=0 #78
+2020/07/17-11:12:39.350 2c37 Compacting 4@0 + 1@1 files
+2020/07/17-11:12:39.568 2c37 Generated table #83@0: 1179 keys, 1452505 bytes
+2020/07/17-11:12:39.568 2c37 Compacted 4@0 + 1@1 files => 1452505 bytes
+2020/07/17-11:12:39.604 2c37 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/07/17-11:12:39.604 2c37 Delete type=2 #71
+2020/07/17-11:12:39.604 2c37 Delete type=2 #74
+2020/07/17-11:12:39.604 2c37 Delete type=2 #76
+2020/07/17-11:12:39.604 2c37 Delete type=2 #82
+2020/07/17-11:12:39.604 2c37 Delete type=2 #79
+2020/07/17-12:34:01.411 2c37 Level-0 table #85: started
+2020/07/17-12:34:01.500 2c37 Level-0 table #85: 63621 bytes OK
+2020/07/17-12:34:01.542 2c37 Delete type=0 #81
+2020/07/17-13:34:38.472 2c37 Level-0 table #87: started
+2020/07/17-13:34:38.563 2c37 Level-0 table #87: 67730 bytes OK
+2020/07/17-13:34:38.603 2c37 Delete type=0 #84
+2020/07/17-14:49:40.069 2c37 Level-0 table #89: started
+2020/07/17-14:49:40.141 2c37 Level-0 table #89: 61649 bytes OK
+2020/07/17-14:49:40.173 2c37 Delete type=0 #86
+2020/07/17-15:49:40.120 2c37 Level-0 table #91: started
+2020/07/17-15:49:40.336 2c37 Level-0 table #91: 63408 bytes OK
+2020/07/17-15:49:40.405 2c37 Delete type=0 #88
+2020/07/17-15:49:40.405 2c37 Compacting 4@0 + 1@1 files
+2020/07/17-15:49:40.627 2c37 Generated table #92@0: 1187 keys, 1457903 bytes
+2020/07/17-15:49:40.627 2c37 Compacted 4@0 + 1@1 files => 1457903 bytes
+2020/07/17-15:49:40.669 2c37 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/07/17-15:49:40.670 2c37 Delete type=2 #89
+2020/07/17-15:49:40.670 2c37 Delete type=2 #85
+2020/07/17-15:49:40.670 2c37 Delete type=2 #83
+2020/07/17-15:49:40.670 2c37 Delete type=2 #91
+2020/07/17-15:49:40.670 2c37 Delete type=2 #87
+2020/07/17-16:49:40.128 2c37 Level-0 table #94: started
+2020/07/17-16:49:40.464 2c37 Level-0 table #94: 63076 bytes OK
+2020/07/17-16:49:40.510 2c37 Delete type=0 #90

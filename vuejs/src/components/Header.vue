@@ -13,6 +13,12 @@
           <li v-for="element in practice" :key="element.id">
             <router-link :to="element.link">{{element.name}}</router-link>
           </li>
+             <li v-if="user">
+            <router-link to="/" @click="logout">Logout</router-link>
+          </li>
+           <li v-else>
+            <router-link to="/login">Login</router-link>
+          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -29,9 +35,26 @@ import axios from 'axios'
     },
     mounted(){
       this.getPractice()
+     // this.getlogout()
     },
+    created () { 
+       this.user= localStorage.getItem('token') || false;
+    }, 
+
      methods: {
-        getPractice: function () {
+
+     logout() {
+                axios.post('logout').then(response => {
+                    if (response.status === 200) {
+                        //console.log('logout')
+                    }
+                    else {
+                        // throw error and go to catch block
+                    }
+                })
+              },
+
+      getPractice: function () {
          axios
       .get('http://localhost/officetask/database/header.php')
       .then(response => {
