@@ -1,3 +1,6 @@
-2020/07/16-16:22:48.260 2ce3 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Session Storage/MANIFEST-000001
-2020/07/16-16:22:48.262 2ce3 Recovering log #28
-2020/07/16-16:22:49.283 2ce3 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Session Storage/000028.log 
+2020/07/17-00:47:16.230 1c7a Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Session Storage/MANIFEST-000001
+2020/07/17-00:47:16.230 1c7a Recovering log #28
+2020/07/17-00:47:16.972 1c7a Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Session Storage/000028.log 
+2020/07/17-01:12:12.416 2b31 Level-0 table #32: started
+2020/07/17-01:12:12.469 2b31 Level-0 table #32: 17341 bytes OK
+2020/07/17-01:12:12.531 2b31 Delete type=0 #28

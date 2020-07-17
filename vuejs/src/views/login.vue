@@ -91,7 +91,7 @@ function setSuccessFor(input) {
   methods: {
   checkCurrentLogin () {
     if (localStorage.token) {
-      this.$router.replace('/Admin')
+      this.$router.replace('/AdminHomepage')
     }
   },
     login () {
@@ -117,7 +117,7 @@ function setSuccessFor(input) {
 
      localStorage.token = req.data.token
      this.error = false
-     this.$router.push('/Admin')
+     this.$router.push('/AdminHomepage')
      },
 
     loginFailed () {
@@ -126,12 +126,12 @@ function setSuccessFor(input) {
     },
     updated () {
     if (localStorage.token) {
-    this.$router.replace('/Admin')
+    this.$router.replace('/AdminHomepage')
   }
 },
   created () {
   if (localStorage.token) {
-    this.$router.replace('/Admin')
+    this.$router.replace('/AdminHomepage')
   }
 },
   }

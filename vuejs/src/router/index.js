@@ -38,7 +38,9 @@ Vue.use(VueRouter)
     component: AdminHomepage,
     
     beforeEnter(to,from,next){ 
-    if(localStorage.getItem('login')){
+      //console.log(localStorage);
+      //console.log(localStorage.getItem('token'));
+    if(localStorage.getItem('token')){
       next();
     }
     else{
