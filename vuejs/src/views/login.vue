@@ -122,11 +122,10 @@ function setSuccessFor(input) {
 
     loginFailed () {
     this.error = 'Login failed!'
-    delete localStorage.token
     },
     updated () {
     if (localStorage.token) {
-    this.$router.replace('/AdminHomepage')
+    this.$router.replace('')
   }
 },
   created () {

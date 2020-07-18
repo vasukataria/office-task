@@ -96,5 +96,14 @@ export default {
     Footer,
     Icon
   },
+  work(){
+
+    if (localStorage.getItem('token'))
+      this.$router.push("/")
+
+  },
+  beforeMount(){
+    this.work();
+  },
 }
 </script>

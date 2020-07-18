@@ -1,15 +1,15 @@
-2020/07/14-01:45:54.833 2cc8 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/MANIFEST-000001
-2020/07/14-01:45:54.833 2cc8 Recovering log #4
-2020/07/14-01:45:54.833 2cc8 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/000004.log 
-2020/07/14-01:46:27.852 1ae8 Level-0 table #8: started
-2020/07/14-01:46:27.885 1ae8 Level-0 table #8: 190 bytes OK
-2020/07/14-01:46:27.919 1ae8 Delete type=0 #4
-2020/07/14-01:46:27.919 1ae8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2020/07/14-01:46:27.937 1ae8 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 2924 : 1
-2020/07/14-01:46:27.937 1ae8 Compacting 1@1 + 1@2 files
-2020/07/14-01:46:27.974 1ae8 Generated table #9@1: 498 keys, 28832 bytes
-2020/07/14-01:46:27.974 1ae8 Compacted 1@1 + 1@2 files => 28832 bytes
-2020/07/14-01:46:28.007 1ae8 compacted to: files[ 0 0 1 0 0 0 0 ]
-2020/07/14-01:46:28.007 1ae8 Delete type=2 #8
-2020/07/14-01:46:28.007 1ae8 Delete type=2 #5
-2020/07/14-01:46:28.019 1ae8 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 2924 : 1 .. (end); will stop at (end)
+2020/07/18-17:31:28.711 b47 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/MANIFEST-000001
+2020/07/18-17:31:28.833 b47 Recovering log #11
+2020/07/18-17:31:28.904 b47 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_router.vuejs.org_0.indexeddb.leveldb/000011.log 
+2020/07/18-17:32:04.019 6c37 Level-0 table #16: started
+2020/07/18-17:32:04.063 6c37 Level-0 table #16: 298 bytes OK
+2020/07/18-17:32:04.104 6c37 Delete type=0 #11
+2020/07/18-17:32:04.114 6c37 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/07/18-17:32:04.114 6c37 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x19\x00a\x00s\x00s\x00e\x00t\x00s\x00/\x00j\x00s\x00/\x00a\x00p\x00p\x00.\x004\x006\x00a\x005\x00c\x007\x009\x002\x00.\x00j\x00s' @ 4259 : 0
+2020/07/18-17:32:04.114 6c37 Compacting 1@1 + 1@2 files
+2020/07/18-17:32:04.175 6c37 Generated table #17@1: 498 keys, 28917 bytes
+2020/07/18-17:32:04.175 6c37 Compacted 1@1 + 1@2 files => 28917 bytes
+2020/07/18-17:32:04.204 6c37 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/07/18-17:32:04.204 6c37 Delete type=2 #16
+2020/07/18-17:32:04.204 6c37 Delete type=2 #13
+2020/07/18-17:32:04.204 6c37 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x19\x00a\x00s\x00s\x00e\x00t\x00s\x00/\x00j\x00s\x00/\x00a\x00p\x00p\x00.\x004\x006\x00a\x005\x00c\x007\x009\x002\x00.\x00j\x00s' @ 4259 : 0 .. (end); will stop at (end)

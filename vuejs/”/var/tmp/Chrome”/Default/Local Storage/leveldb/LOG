@@ -1,3 +1,18 @@
-2020/07/18-00:13:16.704 1457 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
-2020/07/18-00:13:16.705 1457 Recovering log #93
-2020/07/18-00:13:16.738 1457 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000093.log 
+2020/07/18-14:41:53.695 5bf7 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/MANIFEST-000001
+2020/07/18-14:41:53.695 5bf7 Recovering log #96
+2020/07/18-14:41:54.207 5bf7 Reusing old log /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/Local Storage/leveldb/000096.log 
+2020/07/18-15:45:02.674 69a4 Level-0 table #100: started
+2020/07/18-15:45:02.739 69a4 Level-0 table #100: 13882 bytes OK
+2020/07/18-15:45:02.851 69a4 Delete type=0 #96
+2020/07/18-18:05:20.791 69a4 Level-0 table #102: started
+2020/07/18-18:05:20.902 69a4 Level-0 table #102: 15530 bytes OK
+2020/07/18-18:05:21.032 69a4 Delete type=0 #99
+2020/07/18-18:05:21.032 69a4 Compacting 4@0 + 1@1 files
+2020/07/18-18:05:21.372 69a4 Generated table #103@0: 1243 keys, 1461037 bytes
+2020/07/18-18:05:21.372 69a4 Compacted 4@0 + 1@1 files => 1461037 bytes
+2020/07/18-18:05:21.401 69a4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/07/18-18:05:21.401 69a4 Delete type=2 #94
+2020/07/18-18:05:21.401 69a4 Delete type=2 #97
+2020/07/18-18:05:21.401 69a4 Delete type=2 #102
+2020/07/18-18:05:21.401 69a4 Delete type=2 #92
+2020/07/18-18:05:21.401 69a4 Delete type=2 #100

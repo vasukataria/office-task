@@ -14,6 +14,7 @@ import AdminServices from '../views/AdminServices.vue'
 import AdminPortfolio from '../views/AdminPortfolio.vue'
 import AdminTeam from '../views/AdminTeam.vue'
 import AdminHomepage from '../views/AdminHomepage'
+import logout from '../views/logout.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -31,6 +32,11 @@ Vue.use(VueRouter)
     path: '/login',
     name: 'login',
     component: login
+  },
+   {
+    path: '/logout',
+    name: 'logout',
+    component: logout
   },
    {
     path: '/AdminHomepage',

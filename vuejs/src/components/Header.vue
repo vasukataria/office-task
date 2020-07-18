@@ -14,7 +14,7 @@
             <router-link :to="element.link">{{element.name}}</router-link>
           </li>
              <li v-if="user">
-            <router-link to="/" @click="logout">Logout</router-link>
+            <router-link to="/logout" @click="logout">Logout</router-link>
           </li>
            <li v-else>
             <router-link to="/login">Login</router-link>
@@ -33,10 +33,6 @@ import axios from 'axios'
       practice:[]
     }
     },
-    mounted(){
-      this.getPractice()
-     // this.getlogout()
-    },
     created () { 
        this.user= localStorage.getItem('token') || false;
     }, 
@@ -44,14 +40,13 @@ import axios from 'axios'
      methods: {
 
      logout() {
-                axios.post('logout').then(response => {
-                    if (response.status === 200) {
-                        //console.log('logout')
-                    }
-                    else {
-                        // throw error and go to catch block
+                axios.post('http://localhost/officetask/database/logout.php').then(response => {
+                    if (response.status === 401) {
+                        console.log('logout')
                     }
                 })
+                localStorage.removeItem('token')
+                //this.$router.push('/')
               },
 
       getPractice: function () {
@@ -62,6 +57,11 @@ import axios from 'axios'
       })
       }
     },
+    beforeMount(){
+    this.getPractice();
+    this.logout();
+ },
+
 }
 
 </script>

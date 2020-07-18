@@ -1,6 +1,7 @@
 <template>
   <div id="app">
       <router-link to="/"></router-link>
+
       
     <router-view/>
   </div>
@@ -24,7 +25,6 @@ import jQuery from 'jquery'
 import {WOW} from 'wowjs'
 //import counterup from 'jquery.counterup'
 //require('superfish')
-
 export default {
   name: 'Home',
   mounted(){

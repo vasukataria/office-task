@@ -1,0 +1,5 @@
+2020/07/18-17:38:06.461 e3e Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_vuex.vuejs.org_0.indexeddb.leveldb/MANIFEST-000001
+2020/07/18-17:38:54.213 6c37 Level-0 table #5: started
+2020/07/18-17:38:54.246 6c37 Level-0 table #5: 58764 bytes OK
+2020/07/18-17:38:54.277 6c37 Delete type=0 #3
+2020/07/18-17:38:54.290 6c37 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
