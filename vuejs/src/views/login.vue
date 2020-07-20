@@ -1,21 +1,19 @@
 <template>
 <div id="body">
   <div id="container">
-    <div id="header">
-        <h2 id="h2"></h2>
-    </div>
+   
     <form id="form" action="" method="post" @submit.prevent="login" enctype='multipart/form-data'>
         <div id="form-signin">
           <h2 id="h2">login</h2><br>
             <label for="username">Username</label>
-            <input type="text" placeholder="Enter your username" v-model="username" id="username" />
+            <input type="text" placeholder="Enter your username" id="username" name="uName" v-model="uName" />
             <i id="fas fa-check-circle"></i>
             <i id="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div id="form-signin">
             <label for="password">Password</label>
-            <input type="password" placeholder="Password" v-model="password" id="password"/>
+            <input type="password" placeholder="Password" id="password" name="pass"  v-model="pass" />
             <i id="fas fa-check-circle"></i>
             <i id="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -31,8 +29,8 @@ export default {
   name: 'login',
   data () {
     return {
-      username: '',
-      password: '',
+      uName: "",
+      pass: "",
       error: false
     }
   },
@@ -85,9 +83,6 @@ function setSuccessFor(input) {
   created () {
   this.checkCurrentLogin()
   },
-  updated () {
-  this.checkCurrentLogin()
-  },
   methods: {
   checkCurrentLogin () {
     if (localStorage.token) {
@@ -95,7 +90,7 @@ function setSuccessFor(input) {
     }
   },
     login () {
-      this.$http.post('/login.php', { username: this.username, password: this.password })
+      this.$http.post('/login.php', { uName: this.uName, pass: this.pass })
     .then(request => {
       console.log(request);
       if(request.status === 200) {
@@ -110,29 +105,27 @@ function setSuccessFor(input) {
     },
     loginSuccessful(req) {
       //console.log(!req.data.token); 
-      if (!req.data.token) {
+      if (req.data.token == null) {
         this.loginFailed()
         return
       }
 
      localStorage.token = req.data.token
-     this.error = false
-     this.$router.push('/AdminHomepage')
+     localStorage.user  = req.data.user
+     
+     if(localStorage.user == "Admin")
+     {
+      //this.error = false
+     this.$router.replace('/AdminHomepage')
+     }else{
+      this.$router.replace('/')
+     }
      },
 
     loginFailed () {
     this.error = 'Login failed!'
+    //delete localStorage.token
     },
-    updated () {
-    if (localStorage.token) {
-    this.$router.replace('')
-  }
-},
-  created () {
-  if (localStorage.token) {
-    this.$router.replace('/AdminHomepage')
-  }
-},
   }
 }
 </script>

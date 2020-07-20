@@ -27,8 +27,8 @@ import axios from'./backend/axios'
 Vue.use(VueToast, {
   // One of options
   position: 'top-right',
-  duration: 20000,
-  height: 55
+  duration: 5000,
+  height: 100
 })
 Vue.use(VueAxios, axios)
 Vue.use(VueMaterial)

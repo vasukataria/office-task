@@ -1,9 +1,7 @@
 <template>
 <div id="body">
   <div id="container">
-    <div id="header">
     <button><router-link to="/login">login</router-link></button>    
-    </div>
     <form id="form" method="post" role="signupForm" class="signupForm" @submit="userForm" action="" enctype='multipart/form-data'>
         <h2 id="h2">Create Account</h2>
         <br>
@@ -74,10 +72,6 @@ const password2 = document.getElementById('password2');
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
-   // console.log('hello');
-   // self.getAllMembers();
-   
-
 });
 
 function checkInputs() {
@@ -147,11 +141,10 @@ methods:{
           }).then(request => { 
             console.log(request);
             request.text().then((message) => {
-                if(request.status === 409){
+                if(request.status === 400){
                     Vue.$toast.open(message);
 
                     this.userValidation()
-                    //console.log('hello');
                 } else if (request.status === 200){
                 this.signupSuccessful()
                 }else{
