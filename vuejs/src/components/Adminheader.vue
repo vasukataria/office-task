@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+ <div>
     <md-app>
       <md-app-toolbar class="md-primary">
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
@@ -7,11 +7,11 @@
         </md-button>
         <span class="md-title">Admin..!!!</span>
         <div class="md-toolbar-section-end">
-        <md-button @click="showSidepanel = true">Logout</md-button>
+        <md-button><router-link to="/logout" style="color: white;">Logout</router-link></md-button>
       </div>
-      </md-app-toolbar>
-
+      </md-app-toolbar>      
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
+
         <md-toolbar class="md-transparent" md-elevation="0">
           <span>Power to you</span>
 
@@ -21,11 +21,15 @@
             </md-button>
           </div>
         </md-toolbar>
-
         <md-list>
+           <md-list-item>
+           
+          <span class="md-list-item-text"><router-link to="/">Home</router-link></span>
+          </md-list-item>
+
           <md-list-item>
            
-          <span class="workon"><router-link to="/Admin">User C-Form</router-link></span>
+          <span class="md-list-item-text"><router-link to="/Admin">User C-Form</router-link></span>
           </md-list-item>
 
           <md-list-item>
@@ -67,15 +71,18 @@
           <span class="md-list-item-text"><router-link to="/AdminServices">Service</router-link>
           </span>
           </md-list-item>
-
           <md-list-item>
           <span class="md-list-item-text"><router-link to="/AdminTeam">Team</router-link>
           </span>
           </md-list-item>
-          
         </md-list>
-      </md-app-drawer>
+      </md-app-drawer>   
+       <md-app-content>
+        <router-view />
+       </md-app-content>
     </md-app>
+       
+  
   </div>
 </template>
 
@@ -98,7 +105,14 @@ import 'vue-material/dist/theme/default.css'
 
 <style lang="scss" scoped>
   .md-app {
-    min-height: 100px;
+    min-height: 700px;
+  }
+  .md-drawer {
+    width: 300px;
+    max-width: calc(100vw - 125px);
+  }
+  .md-toolbar.md-theme-default.md-primary{
+    background-color: #2dc997;
   }
   
 </style>

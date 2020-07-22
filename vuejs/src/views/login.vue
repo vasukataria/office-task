@@ -86,13 +86,17 @@ function setSuccessFor(input) {
   methods: {
   checkCurrentLogin () {
     if (localStorage.token) {
-      this.$router.replace('/AdminHomepage')
+      if (localStorage.user==="Admin"){
+        this.$router.replace('/AdminHomepage')
+      }
+      else{
+        this.$router.replace('/')
+      }
     }
   },
     login () {
       this.$http.post('/login.php', { uName: this.uName, pass: this.pass })
     .then(request => {
-      console.log(request);
       if(request.status === 200) {
         this.loginSuccessful(request)  
       } else {
@@ -119,6 +123,7 @@ function setSuccessFor(input) {
      this.$router.replace('/AdminHomepage')
      }else{
       this.$router.replace('/')
+      console.log(localStorage)
      }
      },
 

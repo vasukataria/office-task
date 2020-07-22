@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Adminheader />
-	<router-view />
+	
 </div>
 </template>
 <script>

@@ -1,0 +1,16 @@
+2020/07/22-04:22:15.219 6322 Reusing MANIFEST /home/vasu/regnavue/vuejs/”/var/tmp/Chrome”/Default/IndexedDB/https_3171q45q1p.csb.app_0.indexeddb.leveldb/MANIFEST-000001
+2020/07/22-04:24:15.307 6359 Level-0 table #5: started
+2020/07/22-04:24:15.467 6359 Level-0 table #5: 1813097 bytes OK
+2020/07/22-04:24:15.545 6359 Delete type=0 #3
+2020/07/22-04:26:22.383 6359 Level-0 table #7: started
+2020/07/22-04:26:22.642 6359 Level-0 table #7: 1526707 bytes OK
+2020/07/22-04:26:22.920 6359 Delete type=0 #4
+2020/07/22-04:26:22.939 6359 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/07/22-04:26:22.939 6359 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0a\x003\x001\x007\x001\x00q\x004\x005\x00q\x001\x00p' @ 840 : 1
+2020/07/22-04:26:22.940 6359 Compacting 1@1 + 1@2 files
+2020/07/22-04:26:24.538 6359 Generated table #8@1: 191 keys, 263661 bytes
+2020/07/22-04:26:24.538 6359 Compacted 1@1 + 1@2 files => 263661 bytes
+2020/07/22-04:26:24.835 6359 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/07/22-04:26:24.835 6359 Delete type=2 #5
+2020/07/22-04:26:24.835 6359 Delete type=2 #7
+2020/07/22-04:26:24.843 6359 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0a\x003\x001\x007\x001\x00q\x004\x005\x00q\x001\x00p' @ 840 : 1 .. (end); will stop at (end)

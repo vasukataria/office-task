@@ -13,6 +13,7 @@
           <li v-for="element in practice" :key="element.id">
             <router-link :to="element.link">{{element.name}}</router-link>
           </li>
+          <li> </li>
              <li v-if="user">
             <router-link to="/logout" >Logout</router-link>
           </li>
@@ -24,13 +25,21 @@
     </div>
      </header>
 </template>
+<style lang="scss" scoped>
+.md-theme-default a:not(.md-button){
+  color: white;
+}
+.md-theme-default a:not(.md-button):hover{
+  color: white;
+}
+</style>
 <script>
 import axios from 'axios'
  export default{
   name: 'Practice',
    data:() =>{
     return{
-      practice:[]
+      practice:[],
     }
     },
     created () { 
@@ -44,8 +53,9 @@ import axios from 'axios'
       .get('http://localhost/officetask/database/header.php')
       .then(response => {
         this.practice = response.data
+
       })
-      }
+      },
     },
     beforeMount(){
     this.getPractice();

@@ -40,18 +40,25 @@ Vue.use(VueRouter)
   },
    {
     path: '/AdminHomepage',
-    name: 'Homepage',
+    name: 'homepage',
     component: AdminHomepage,
     
-    beforeEnter(to,from,next){ 
-      
-    if(localStorage.getItem('token')){
-      next();
-    }
-    else{
-      next('/login');
-    }
-    },
+    beforeEnter(to, from, next){      
+        let user = localStorage.getItem('user');
+      if(!user) 
+        {
+           next('/login')
+        }  
+        
+       else if(user  === 'Admin')
+       {
+             
+             next();
+        } 
+        else{
+              next('/')
+          }             
+  },
     children:[
     {
     path: '/Admin',
