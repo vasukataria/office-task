@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "auth0-contact-form": "^2.0.18",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "bootstrap-css": "^4.0.0-alpha.5",
     "core-js": "^3.6.4",
