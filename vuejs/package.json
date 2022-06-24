@@ -23,7 +23,7 @@
     "jquery-min": "0.0.2",
     "jquery.counterup": "^2.1.0",
     "jquery.easing": "^1.4.1",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.5.0",
     "mdvue": "0.0.1",
     "popper.js": "^1.16.1",
     "superfish": "^1.7.10",
